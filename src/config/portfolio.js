@@ -33,7 +33,7 @@ export const projects = [
     name: "Taskora AI",
     eyebrow: "Multi-tenant SaaS / AI-assisted",
     summary:
-      "Multi-tenant project management platform that turns natural-language goals into structured plans. Uses a strict human-in-the-loop AI architecture.",
+      "Production-grade project management platform where AI acts as a planning co-pilot. Features 5-role access control and human approval before saving to the database.",
     highlights: [
       "Multi-tenant 5-role RBAC (Owner, Admin, Manager, Member, Viewer) enforced at the database query level.",
       "AI planning co-pilot uses strict JSON Schema validation; zero AI writes hit the database without approval.",
@@ -53,7 +53,7 @@ export const projects = [
       "Groq API",
     ],
     repository: "https://github.com/Sabari-bala/taskora-ai",
-    live: null,
+    live: "https://taskora-ai-delta.vercel.app",
     theme: "violet",
   },
   {
