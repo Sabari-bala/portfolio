@@ -82,8 +82,8 @@ export const projects = [
       "Tailwind CSS",
       "Recharts",
     ],
-    repository: "https://github.com/Sabari-bala/shortmetric",
-    live: null,
+    repository: "https://github.com/Sabari-bala/ShortMetric",
+    live: "https://shortmetric.vercel.app",
     theme: "emerald",
   },
 ];
