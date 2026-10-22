@@ -64,14 +64,14 @@ export const projects = [
     summary:
       "Full-stack SaaS link management and click analytics platform. Migrated from a vanilla JS frontend to React 18 with server-state management.",
     highlights: [
-      "Custom aliases, expiration controls, activation toggles, and QR code generation.",
-      "Custom user-agent parsing records device, OS, and referrer without external libraries.",
-      "React 18 frontend uses TanStack Query and protected routes with React Router v6.",
+      "Custom aliases, expiration controls, duplicate URL prevention, and QR code generation.",
+      "Backend querysets enforce strict per-user data isolation for links and analytics.",
+      "React 18 frontend uses TanStack Query, Axios interceptors, and protected routes.",
       "Interactive analytics dashboard for link performance and traffic breakdowns.",
     ],
     decisions: [
-      "Axios interceptors handle 401 Unauthorized errors globally, keeping auth logic clean and centralized.",
-      "Click metadata is captured in a single write at redirect time to keep the hot path fast.",
+      "Diagnosed Vercel deployment failures caused by Windows PowerShell injecting invisible Byte Order Marks (BOM) into files.",
+      "Click metadata captured in a single write at redirect time to keep the hot path fast.",
     ],
     stack: [
       "Python",
