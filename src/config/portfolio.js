@@ -33,24 +33,23 @@ export const projects = [
     name: "Taskora AI",
     eyebrow: "Multi-tenant SaaS / AI-assisted",
     summary:
-      "Multi-tenant project management platform that turns natural-language goals into structured plans, with human approval before AI output is saved.",
+      "Multi-tenant project management platform that turns natural-language goals into structured plans. Uses a strict human-in-the-loop AI architecture.",
     highlights: [
-      "Workspace-scoped RBAC across five roles: Owner, Admin, Manager, Member, Viewer.",
-      "Four AI workflows: project planning, task breakdown, summarization, and insights.",
-      "AI output is validated and staged for review before any write reaches the database.",
-      "Kanban board, milestones, subtasks, activity timeline, notifications, and analytics.",
+      "Multi-tenant 5-role RBAC (Owner, Admin, Manager, Member, Viewer) enforced at the database query level.",
+      "AI planning co-pilot uses strict JSON Schema validation; zero AI writes hit the database without approval.",
+      "Optimistic Kanban board using dnd-kit, providing instant UI feedback with automatic rollback on API failure.",
+      "Secure JWT authentication using in-memory access tokens and HttpOnly refresh cookies.",
     ],
     decisions: [
-      "AI provider hidden behind an abstraction layer, so swapping models stays a one-file change.",
-      "Human-in-the-loop approval before AI-generated content is persisted.",
+      "Built a three-layer backend (Views, Serializers, Services) to keep complex business logic entirely testable without HTTP.",
+      "Abstracted the AI provider behind an interface, allowing a one-line swap between Groq, OpenAI, or Gemini.",
     ],
     stack: [
       "Python",
-      "Django",
       "Django REST Framework",
       "PostgreSQL",
       "React",
-      "SimpleJWT",
+      "Tailwind CSS",
       "Groq API",
     ],
     repository: "https://github.com/Sabari-bala/taskora-ai",
@@ -66,7 +65,7 @@ export const projects = [
     highlights: [
       "Custom aliases, expiration controls, duplicate URL prevention, and QR code generation.",
       "Backend querysets enforce strict per-user data isolation for links and analytics.",
-      "React 18 frontend uses TanStack Query, Axios interceptors, and protected routes.",
+      "React 18 frontend uses TanStack Query, Axios interceptors, and protected routing.",
       "Interactive analytics dashboard for link performance and traffic breakdowns.",
     ],
     decisions: [
