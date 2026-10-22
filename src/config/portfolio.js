@@ -46,11 +46,15 @@ export const projects = [
     ],
     stack: [
       "Python",
+      "Django",
       "Django REST Framework",
       "PostgreSQL",
       "React",
+      "Vite",
       "Tailwind CSS",
+      "SimpleJWT",
       "Groq API",
+      "dnd-kit"
     ],
     repository: "https://github.com/Sabari-bala/taskora-ai",
     live: "https://taskora-ai-delta.vercel.app",
@@ -74,13 +78,15 @@ export const projects = [
     ],
     stack: [
       "Python",
+      "Django",
       "Django REST Framework",
       "PostgreSQL",
-      "React 18",
+      "React",
       "Vite",
       "Tailwind CSS",
       "TanStack Query",
       "Recharts",
+      "Axios"
     ],
     repository: "https://github.com/Sabari-bala/ShortMetric",
     live: "https://shortmetric.vercel.app",

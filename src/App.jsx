@@ -58,7 +58,7 @@ export default function App() {
           id="contact"
           eyebrow="Contact"
           title="Get in touch"
-          description="Open to entry-level Python and Django developer roles."
+          description="Open to full-stack developer roles where I can build secure APIs and clean user interfaces."
         >
           <Contact />
         </Section>
