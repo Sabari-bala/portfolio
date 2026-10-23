@@ -38,7 +38,7 @@ export const projects = [
       "Multi-tenant 5-role RBAC (Owner, Admin, Manager, Member, Viewer) with tenant isolation at the queryset level.",
       "AI co-pilot uses strict JSON Schema validation; zero AI writes hit the database without user approval.",
       "Optimistic Kanban board built with dnd-kit and TanStack Query, featuring automatic rollback on API failure.",
-      "Secure JWT auth with in-memory access tokens and HttpOnly refresh cookies, covered by 185 automated tests.",
+      "Secure JWT auth with in-memory access tokens and HttpOnly refresh cookies, covered by 200 automated tests (94% coverage).",
     ],
     decisions: [
       "Built a three-layer backend (Views, Serializers, Services) to keep complex business logic entirely testable without HTTP.",
@@ -50,10 +50,12 @@ export const projects = [
       "Django REST Framework",
       "PostgreSQL",
       "React",
+      "Vite",
+      "React Router",
       "TanStack Query",
       "Tailwind CSS",
+      "dnd-kit",
       "SimpleJWT",
-      "Pydantic",
       "Groq API"
     ],
     repository: "https://github.com/Sabari-bala/taskora-ai",
@@ -81,12 +83,13 @@ export const projects = [
       "Django",
       "Django REST Framework",
       "PostgreSQL",
-      "React",
+      "React 18",
       "Vite",
+      "React Router",
       "Tailwind CSS",
       "TanStack Query",
       "Recharts",
-      "Axios"
+      "qrcode.react"
     ],
     repository: "https://github.com/Sabari-bala/ShortMetric",
     live: "https://shortmetric.vercel.app",
@@ -97,19 +100,19 @@ export const projects = [
 export const skillGroups = [
   {
     label: "Backend",
-    items: ["Python", "Django", "Django REST Framework", "REST APIs", "SimpleJWT", "RBAC", "Pydantic"],
+    items: ["Python", "Django", "Django REST Framework", "REST APIs", "SimpleJWT", "RBAC", "drf-spectacular"],
   },
   {
     label: "Frontend",
-    items: ["React", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Responsive design"],
+    items: ["React", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "React Router", "TanStack Query"],
   },
   {
     label: "Data & Testing",
-    items: ["PostgreSQL", "SQLite", "SQL", "pytest"],
+    items: ["PostgreSQL", "SQLite", "SQL", "pytest", "pytest-django", "Factory Boy"],
   },
   {
     label: "Tools & Deployment",
-    items: ["Git", "GitHub", "GitHub Actions", "Vite", "Axios", "TanStack Query", "Recharts", "Vercel", "Render", "Neon"],
+    items: ["Git", "GitHub", "GitHub Actions", "Vite", "Axios", "Vercel", "Render", "Neon"],
   },
 ];
 
@@ -157,4 +160,3 @@ export const about = {
 export const contact = {
   lead: "Available immediately. Open to roles in Chennai, Bengaluru, or Remote.",
 };
-
