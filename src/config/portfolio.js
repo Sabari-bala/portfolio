@@ -1,5 +1,5 @@
 // Centralized portfolio content.
-// All facts sourced from Sabari's resume. Do not invent data.
+// Final verified accuracy pass based on strict codebase audit.
 
 export const profile = {
   name: "Sabari Bala M R",
@@ -38,25 +38,25 @@ export const projects = [
       "Multi-tenant 5-role RBAC (Owner, Admin, Manager, Member, Viewer) with tenant isolation at the queryset level.",
       "AI co-pilot uses strict JSON Schema validation; zero AI writes hit the database without user approval.",
       "Optimistic Kanban board built with dnd-kit and TanStack Query, featuring automatic rollback on API failure.",
-      "Secure JWT auth with in-memory access tokens and HttpOnly refresh cookies, covered by 200 automated tests (94% coverage).",
+      "Secure JWT auth with in-memory access tokens and HttpOnly refresh cookies, covered by 200 tests (94% coverage).",
     ],
     decisions: [
       "Built a three-layer backend (Views, Serializers, Services) to keep complex business logic entirely testable without HTTP.",
       "Engineered an LLM normalizer layer to map variable JSON key names to expected schemas, significantly reducing schema validation failures.",
     ],
     stack: [
-      "Python",
-      "Django",
+      "Python 3.13",
+      "Django 5.1",
       "Django REST Framework",
       "PostgreSQL",
-      "React",
+      "React 18",
       "Vite",
-      "React Router",
       "TanStack Query",
       "Tailwind CSS",
       "dnd-kit",
       "SimpleJWT",
-      "Groq API"
+      "Groq API",
+      "drf-spectacular"
     ],
     repository: "https://github.com/Sabari-bala/taskora-ai",
     live: "https://taskora-ai-delta.vercel.app",
@@ -80,7 +80,7 @@ export const projects = [
     ],
     stack: [
       "Python",
-      "Django",
+      "Django 5",
       "Django REST Framework",
       "PostgreSQL",
       "React 18",
@@ -89,7 +89,8 @@ export const projects = [
       "Tailwind CSS",
       "TanStack Query",
       "Recharts",
-      "qrcode.react"
+      "qrcode.react",
+      "Axios"
     ],
     repository: "https://github.com/Sabari-bala/ShortMetric",
     live: "https://shortmetric.vercel.app",
@@ -104,7 +105,7 @@ export const skillGroups = [
   },
   {
     label: "Frontend",
-    items: ["React", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "React Router", "TanStack Query"],
+    items: ["React", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "React Router", "TanStack Query", "Radix UI"],
   },
   {
     label: "Data & Testing",
@@ -112,7 +113,7 @@ export const skillGroups = [
   },
   {
     label: "Tools & Deployment",
-    items: ["Git", "GitHub", "GitHub Actions", "Vite", "Axios", "Vercel", "Render", "Neon"],
+    items: ["Git", "GitHub", "GitHub Actions", "Vite", "Axios", "Vercel", "Render", "Neon", "Gunicorn"],
   },
 ];
 
