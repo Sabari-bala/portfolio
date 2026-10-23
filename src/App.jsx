@@ -58,7 +58,7 @@ export default function App() {
           id="contact"
           eyebrow="Contact"
           title="Get in touch"
-          description="Available immediately. Open to Chennai, Bengaluru, Remote, and Hybrid roles."
+          description="Available immediately. Open to roles in Chennai, Bengaluru, or Remote."
         >
           <Contact />
         </Section>
@@ -68,3 +68,4 @@ export default function App() {
     </div>
   );
 }
+

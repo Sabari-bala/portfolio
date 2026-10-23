@@ -155,5 +155,6 @@ export const about = {
 };
 
 export const contact = {
-  lead: "Available immediately. Open to Chennai, Bengaluru, Remote, and Hybrid roles.",
+  lead: "Available immediately. Open to roles in Chennai, Bengaluru, or Remote.",
 };
+
