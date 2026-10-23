@@ -65,16 +65,16 @@ export const projects = [
     name: "ShortMetric",
     eyebrow: "URL shortener / Click analytics",
     summary:
-      "Full-stack SaaS link management and click analytics platform. Migrated from a vanilla JS frontend to React 18 with server-state management.",
+      "Full-stack SaaS link management and click analytics platform. Migrated from a vanilla JS frontend to a modern React 18 SPA with server-state caching.",
     highlights: [
-      "Custom aliases, expiration controls, duplicate URL prevention, and QR code generation.",
-      "Backend querysets enforce strict per-user data isolation for links and analytics.",
-      "React 18 frontend uses TanStack Query, Axios interceptors, and protected routing.",
-      "Interactive analytics dashboard for link performance and traffic breakdowns.",
+      "Custom aliases, expiration controls, duplicate URL prevention, and QR code generation with PNG export.",
+      "Backend querysets enforce strict per-user data isolation; React frontend uses protected routing.",
+      "Interactive Recharts dashboard transforms raw click events into time-series, device, and referrer analytics.",
+      "Built a custom User-Agent parser from raw request strings, removing external dependencies.",
     ],
     decisions: [
       "Diagnosed Vercel deployment failures caused by Windows PowerShell injecting invisible Byte Order Marks (BOM) into files.",
-      "Click metadata captured in a single write at redirect time to keep the hot path fast.",
+      "Engineered the redirect engine to validate link status and record all click metadata in a single write, keeping the hot path fast.",
     ],
     stack: [
       "Python",
