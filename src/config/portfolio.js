@@ -45,18 +45,18 @@ export const projects = [
       "Engineered an LLM normalizer layer to map variable JSON key names to expected schemas, significantly reducing schema validation failures.",
     ],
     stack: [
-      "Python 3.13",
-      "Django 5.1",
+      "Python",
+      "Django",
       "Django REST Framework",
       "PostgreSQL",
-      "React 18",
+      "React",
       "Vite",
+      "React Router",
       "TanStack Query",
       "Tailwind CSS",
       "dnd-kit",
       "SimpleJWT",
-      "Groq API",
-      "drf-spectacular"
+      "Groq API"
     ],
     repository: "https://github.com/Sabari-bala/taskora-ai",
     live: "https://taskora-ai-delta.vercel.app",
@@ -67,7 +67,7 @@ export const projects = [
     name: "ShortMetric",
     eyebrow: "URL shortener / Click analytics",
     summary:
-      "Full-stack SaaS link management and click analytics platform. Built with a React 18 single-page application, TanStack Query for server-state caching, and a Django REST backend.",
+      "Full-stack SaaS link management and click analytics platform. Built with a single-page React application, TanStack Query for server-state caching, and a Django REST backend.",
     highlights: [
       "Custom aliases, expiration controls, duplicate URL prevention, and QR code generation with PNG export.",
       "Backend querysets enforce strict per-user data isolation; React frontend uses protected routing.",
@@ -80,17 +80,17 @@ export const projects = [
     ],
     stack: [
       "Python",
-      "Django 5",
+      "Django",
       "Django REST Framework",
       "PostgreSQL",
-      "React 18",
+      "React",
       "Vite",
       "React Router",
       "Tailwind CSS",
       "TanStack Query",
       "Recharts",
-      "qrcode.react",
-      "Axios"
+      "Axios",
+      "qrcode.react"
     ],
     repository: "https://github.com/Sabari-bala/ShortMetric",
     live: "https://shortmetric.vercel.app",
