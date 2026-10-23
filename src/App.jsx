@@ -58,7 +58,7 @@ export default function App() {
           id="contact"
           eyebrow="Contact"
           title="Get in touch"
-          description="Open to full-stack developer roles where I can build secure APIs and clean user interfaces."
+          description="Available immediately. Open to Chennai, Bengaluru, Remote, and Hybrid roles."
         >
           <Contact />
         </Section>

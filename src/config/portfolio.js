@@ -14,7 +14,7 @@ export const profile = {
   hero: {
     eyebrow: "Python Full Stack Developer",
     intro:
-      "I build full-stack web applications with Django and React. My focus is clean API contracts, secure workspace permissions, and interfaces that are reliable under real use.",
+      "I build secure, well-tested web apps with Django, DRF, React, and PostgreSQL. I care about permissions, clean API contracts, and interfaces that hold up under real use.",
     workingWith: ["Python", "Django", "React", "PostgreSQL"],
   },
 };
@@ -33,16 +33,16 @@ export const projects = [
     name: "Taskora AI",
     eyebrow: "Multi-tenant SaaS / AI-assisted",
     summary:
-      "Production-grade project management platform where AI acts as a planning co-pilot. Features 5-role access control and human approval before saving to the database.",
+      "Production-style project management platform where AI acts as a planning co-pilot. Features 5-role access control and human approval before saving to the database.",
     highlights: [
-      "Multi-tenant 5-role RBAC (Owner, Admin, Manager, Member, Viewer) enforced at the database query level.",
+      "Multi-tenant 5-role RBAC (Owner, Admin, Manager, Member, Viewer) with tenant isolation at the queryset level.",
       "AI co-pilot uses strict JSON Schema validation; zero AI writes hit the database without user approval.",
       "Optimistic Kanban board built with dnd-kit and TanStack Query, featuring automatic rollback on API failure.",
       "Secure JWT auth with in-memory access tokens and HttpOnly refresh cookies, covered by 185 automated tests.",
     ],
     decisions: [
       "Built a three-layer backend (Views, Serializers, Services) to keep complex business logic entirely testable without HTTP.",
-      "Engineered an LLM normalizer layer to map variable JSON key names to expected schemas, dropping validation failure rates to near zero.",
+      "Engineered an LLM normalizer layer to map variable JSON key names to expected schemas, significantly reducing schema validation failures.",
     ],
     stack: [
       "Python",
@@ -97,7 +97,7 @@ export const projects = [
 export const skillGroups = [
   {
     label: "Backend",
-    items: ["Python", "Django", "Django REST Framework", "REST APIs", "SimpleJWT", "RBAC"],
+    items: ["Python", "Django", "Django REST Framework", "REST APIs", "SimpleJWT", "RBAC", "Pydantic"],
   },
   {
     label: "Frontend",
@@ -105,11 +105,11 @@ export const skillGroups = [
   },
   {
     label: "Data & Testing",
-    items: ["PostgreSQL", "SQLite", "SQL", "pytest", "pytest-django", "Vitest", "React Testing Library"],
+    items: ["PostgreSQL", "SQLite", "SQL", "pytest"],
   },
   {
-    label: "Tools & Concepts",
-    items: ["Git", "GitHub", "GitHub Actions", "Vite", "Axios", "TanStack Query", "Recharts", "OOP", "DSA", "DBMS"],
+    label: "Tools & Deployment",
+    items: ["Git", "GitHub", "GitHub Actions", "Vite", "Axios", "TanStack Query", "Recharts", "Vercel", "Render", "Neon"],
   },
 ];
 
@@ -142,7 +142,7 @@ export const approach = [
 
 export const about = {
   paragraphs: [
-    "I am an entry-level Python Full Stack Developer based in Chennai, India. My background is a B.Sc. in Biotechnology, followed by Python Full Stack Development training at QSpiders, a deliberate move into software.",
+    "I?m an entry-level Python Full Stack Developer based in Chennai. I studied Biotechnology (B.Sc.) before training in Python Full Stack Development at QSpiders. That background taught me to work carefully with data, test assumptions, and document what I find, and I bring the same habits to debugging and data modeling.",
     "I work primarily with Django, Django REST Framework, React, and PostgreSQL. The part of engineering I focus on is the part that holds up under real use: workspace permissions, clean API contracts, and considered interfaces.",
     "The two projects on this page are where that work lives. Taskora AI is a multi-tenant platform with role-based access and human-approved AI workflows. ShortMetric is a focused study in data-heavy UI, URL shortening, and click analytics.",
   ],
@@ -155,6 +155,5 @@ export const about = {
 };
 
 export const contact = {
-  lead: "I am always open to discussing new opportunities and how I can contribute to your team. Feel free to reach out via email or connect with me on LinkedIn.",
+  lead: "Available immediately. Open to Chennai, Bengaluru, Remote, and Hybrid roles.",
 };
-
