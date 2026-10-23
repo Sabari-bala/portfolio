@@ -65,7 +65,7 @@ export const projects = [
     name: "ShortMetric",
     eyebrow: "URL shortener / Click analytics",
     summary:
-      "Full-stack SaaS link management and click analytics platform. Migrated from a vanilla JS frontend to a modern React 18 SPA with server-state caching.",
+      "Full-stack SaaS link management and click analytics platform. Built with a React 18 single-page application, TanStack Query for server-state caching, and a Django REST backend.",
     highlights: [
       "Custom aliases, expiration controls, duplicate URL prevention, and QR code generation with PNG export.",
       "Backend querysets enforce strict per-user data isolation; React frontend uses protected routing.",
@@ -157,3 +157,4 @@ export const about = {
 export const contact = {
   lead: "I am always open to discussing new opportunities and how I can contribute to your team. Feel free to reach out via email or connect with me on LinkedIn.",
 };
+
