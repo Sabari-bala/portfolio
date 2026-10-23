@@ -36,13 +36,13 @@ export const projects = [
       "Production-grade project management platform where AI acts as a planning co-pilot. Features 5-role access control and human approval before saving to the database.",
     highlights: [
       "Multi-tenant 5-role RBAC (Owner, Admin, Manager, Member, Viewer) enforced at the database query level.",
-      "AI planning co-pilot uses strict JSON Schema validation; zero AI writes hit the database without approval.",
-      "Optimistic Kanban board using dnd-kit, providing instant UI feedback with automatic rollback on API failure.",
-      "Secure JWT authentication using in-memory access tokens and HttpOnly refresh cookies.",
+      "AI co-pilot uses strict JSON Schema validation; zero AI writes hit the database without user approval.",
+      "Optimistic Kanban board built with dnd-kit and TanStack Query, featuring automatic rollback on API failure.",
+      "Secure JWT auth with in-memory access tokens and HttpOnly refresh cookies, covered by 185 automated tests.",
     ],
     decisions: [
       "Built a three-layer backend (Views, Serializers, Services) to keep complex business logic entirely testable without HTTP.",
-      "Abstracted the AI provider behind an interface, allowing a one-line swap between Groq, OpenAI, or Gemini.",
+      "Engineered an LLM normalizer layer to map variable JSON key names to expected schemas, dropping validation failure rates to near zero.",
     ],
     stack: [
       "Python",
@@ -50,11 +50,11 @@ export const projects = [
       "Django REST Framework",
       "PostgreSQL",
       "React",
-      "Vite",
+      "TanStack Query",
       "Tailwind CSS",
       "SimpleJWT",
-      "Groq API",
-      "dnd-kit"
+      "Pydantic",
+      "Groq API"
     ],
     repository: "https://github.com/Sabari-bala/taskora-ai",
     live: "https://taskora-ai-delta.vercel.app",
