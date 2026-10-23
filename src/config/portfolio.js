@@ -67,16 +67,16 @@ export const projects = [
     name: "ShortMetric",
     eyebrow: "URL shortener / Click analytics",
     summary:
-      "Full-stack SaaS link management and click analytics platform. Built with a single-page React application, TanStack Query for server-state caching, and a Django REST backend.",
+      "Full-stack SaaS-style link management and click analytics platform. Features secure token auth, custom URL aliases, dynamic QR codes, and interactive dashboards with device and browser breakdowns.",
     highlights: [
-      "Custom aliases, expiration controls, duplicate URL prevention, and QR code generation with PNG export.",
-      "Backend querysets enforce strict per-user data isolation; React frontend uses protected routing.",
-      "Interactive Recharts dashboard transforms raw click events into time-series, device, and referrer analytics.",
-      "Built a custom User-Agent parser from raw request strings, removing external dependencies.",
+      "Secure token-based authentication, link management (CRUD), custom aliases, expiration controls, and dynamic QR code generation.",
+      "Interactive analytics dashboard uses Recharts to transform raw click events into time-series, device, and referrer breakdowns.",
+      "Backend querysets enforce strict per-user data isolation; React frontend uses protected routing and Axios interceptors.",
+      "Built a custom User-Agent parser from raw request strings to capture deep click metadata without external dependencies.",
     ],
     decisions: [
-      "Diagnosed Vercel deployment failures caused by Windows PowerShell injecting invisible Byte Order Marks (BOM) into files.",
-      "Engineered the redirect engine to validate link status and record all click metadata in a single write, keeping the hot path fast.",
+      "Diagnosed and resolved a Vercel build failure caused by Windows PowerShell injecting invisible Byte Order Marks (BOM) into files.",
+      "Debugged critical PaaS deployment issues, including CORS misconfigurations and duplicated API path routing (/api/api/), ensuring smooth communication between Vercel and Render.",
     ],
     stack: [
       "Python",
