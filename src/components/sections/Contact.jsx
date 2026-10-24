@@ -11,7 +11,7 @@ const cardClass =
   "group flex items-center justify-between rounded-lg border border-line bg-card px-4 py-3.5 transition-colors hover:border-line-strong focus:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-paper";
 
 const arrowClass =
-  "text-faint transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5";
+  "text-muted transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5";
 
 export default function Contact() {
   const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${profile.email}`;
@@ -46,11 +46,11 @@ export default function Contact() {
           href={profile.links.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          className={cardClass}
+          className={`${cardClass} hover:[&_svg]:text-[#0A66C2]`}
           aria-label="LinkedIn profile (opens in a new tab)"
         >
           <span className="flex items-center gap-3">
-            <Linkedin size={16} className="text-muted" />
+            <Linkedin size={16} className="text-muted transition-colors" />
             <span>
               <span className="block text-[13px] font-medium text-ink">LinkedIn</span>
               <span className="block text-[11px] text-muted">
@@ -65,11 +65,11 @@ export default function Contact() {
           href={profile.links.github}
           target="_blank"
           rel="noopener noreferrer"
-          className={cardClass}
+          className={`${cardClass} hover:[&_svg]:text-[#181717]`}
           aria-label="GitHub profile (opens in a new tab)"
         >
           <span className="flex items-center gap-3">
-            <Github size={16} className="text-muted" />
+            <Github size={16} className="text-muted transition-colors" />
             <span>
               <span className="block text-[13px] font-medium text-ink">GitHub</span>
               <span className="block text-[11px] text-muted">

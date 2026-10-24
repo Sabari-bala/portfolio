@@ -47,7 +47,7 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub profile"
-              className="rounded-md p-2 text-muted transition-colors hover:bg-sunken hover:text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-focus"
+              className="rounded-md p-2 text-muted transition-colors hover:bg-sunken hover:text-[#181717] focus:outline-none focus-visible:ring-2 focus-visible:ring-focus"
             >
               <Github size={18} />
             </a>
@@ -56,14 +56,14 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn profile"
-              className="rounded-md p-2 text-muted transition-colors hover:bg-sunken hover:text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-focus"
+              className="rounded-md p-2 text-muted transition-colors hover:bg-sunken hover:text-[#0A66C2] focus:outline-none focus-visible:ring-2 focus-visible:ring-focus"
             >
               <Linkedin size={18} />
             </a>
             <a
               href={`mailto:${profile.email}`}
               aria-label="Send email"
-              className="rounded-md p-2 text-muted transition-colors hover:bg-sunken hover:text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-focus"
+              className="rounded-md p-2 text-muted transition-colors hover:bg-sunken hover:text-[#EA4335] focus:outline-none focus-visible:ring-2 focus-visible:ring-focus"
             >
               <Mail size={18} />
             </a>
