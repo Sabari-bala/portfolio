@@ -89,10 +89,17 @@ export default function ProjectCard({ project }) {
       </div>
       
       {project.live && (
-        <p className="mt-3 flex items-center gap-1.5 text-[11px] text-faint">
-          <Info size={12} aria-hidden="true" />
-          Backend runs on a free tier. First load may take up to 60 seconds.
-        </p>
+        <div className="mt-3 space-y-1">
+          <p className="flex items-center gap-1.5 text-[11px] text-faint">
+            <Info size={12} aria-hidden="true" />
+            Backend runs on a free tier. First load may take up to 60 seconds.
+          </p>
+          {project.demoNotice && (
+            <p className="text-[11px] text-faint">
+              {project.demoNotice}
+            </p>
+          )}
+        </div>
       )}
     </article>
   );

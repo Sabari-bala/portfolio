@@ -35,15 +35,17 @@ export const projects = [
     summary:
       "AI-assisted project management platform that helps teams turn project ideas into structured plans, review proposed tasks, and manage work in a workspace.",
     highlights: [
-      "Workspace-level permissions and five-role RBAC enforced at the queryset level.",
-      "AI-generated plans validated against JSON Schema before user approval.",
-      "Kanban task management with optimistic UI updates and automatic rollback on failure.",
-      "Secure JWT auth using in-memory access tokens and HttpOnly refresh cookies.",
+      "Workspace-scoped querysets and object-level permissions across five roles, tested with a role x action matrix.",
+      "AI-generated plans are normalized and validated against JSON Schema, then reviewed by the user before anything is saved.",
+      "JWT auth with in-memory access tokens and HttpOnly refresh cookies.",
+      "200 automated backend tests with 94% coverage, run in GitHub Actions CI.",
     ],
     decisions: [
       "Built a three-layer backend (Views, Serializers, Services) to keep complex business logic entirely testable without HTTP.",
       "Engineered an LLM normalizer layer to map variable JSON key names to expected schemas.",
+      "Fixed logins being dropped by third-party cookie blocking by proxying /api through Vercel, so the refresh cookie is first-party.",
     ],
+    demoNotice: "Demo logins are in the repository README.",
     stack: [
       "Python",
       "Django",
@@ -66,17 +68,18 @@ export const projects = [
     name: "ShortMetric",
     eyebrow: "URL shortener / Click analytics",
     summary:
-      "Full-stack SaaS link management and click analytics platform. Features URL shortening, custom aliases, and interactive data visualizations.",
+      "ShortMetric is a link management and analytics platform with a data-heavy dashboard, custom aliases, QR codes and per-user data isolation.",
     highlights: [
       "URL shortening, custom aliases, expiration controls, and QR code generation.",
       "User-scoped link management with DRF token authentication.",
       "Interactive Recharts dashboard transforms raw click events into device and referrer breakdowns.",
-      "Built a custom User-Agent parser from raw request strings to capture deep click metadata.",
+      "Backend tests and GitHub Actions CI (Django checks, tests and a Vite production build).",
     ],
     decisions: [
       "Diagnosed and resolved a Vercel build failure caused by PowerShell injecting invisible Byte Order Marks (BOM).",
       "Debugged PaaS deployment issues, including CORS misconfigurations and duplicated API routing.",
     ],
+    demoNotice: "Register a free account to try it.",
     stack: [
       "Python",
       "Django",
@@ -96,7 +99,6 @@ export const projects = [
   },
 ];
 
-// Streamlined to EXACTLY what HR filters for
 export const skillGroups = [
   {
     label: "Languages",
@@ -104,19 +106,23 @@ export const skillGroups = [
   },
   {
     label: "Backend",
-    items: ["Django", "Django REST Framework", "REST APIs"],
+    items: ["Django", "Django REST Framework", "REST APIs", "JWT authentication (SimpleJWT)", "role-based access control"],
+  },
+  {
+    label: "AI integration",
+    items: ["Groq API", "JSON Schema validation"],
   },
   {
     label: "Frontend",
-    items: ["React", "Tailwind CSS", "HTML/CSS"],
+    items: ["React", "TanStack Query", "Tailwind CSS", "HTML/CSS"],
   },
   {
     label: "Database",
     items: ["PostgreSQL", "SQLite"],
   },
   {
-    label: "Tools & Testing",
-    items: ["Git", "GitHub", "Vercel", "Render", "pytest"],
+    label: "Tools & testing",
+    items: ["Git", "GitHub", "GitHub Actions (CI)", "pytest", "Factory Boy", "Vercel", "Render", "Neon"],
   },
 ];
 
@@ -141,11 +147,15 @@ export const approach = [
     title: "Environment-based config",
     body: "Secrets and API keys live in environment variables, ensuring safe deployment and reproducible setups.",
   },
+  {
+    title: "Maintainable architecture",
+    body: "Code is structured with clear separation of concerns, making it easier to onboard new developers and scale.",
+  },
 ];
 
 export const about = {
   paragraphs: [
-    "I'm an entry-level Python Full Stack Developer based in Chennai. I studied Biotechnology (B.Sc.) before training in Python Full Stack Development at QSpiders. That background taught me to work carefully with data, test assumptions, and document what I find, and I bring the same habits to debugging and data modeling.",
+    "I\u2019m an entry-level Python Full Stack Developer based in Chennai. I studied Biotechnology (B.Sc.) before training in Python Full Stack Development at QSpiders. That background taught me to work carefully with data, test assumptions, and document what I find, and I bring the same habits to debugging and data modeling.",
     "I work primarily with Django, Django REST Framework, React, and PostgreSQL. The part of engineering I focus on is the part that holds up under real use: workspace permissions, clean API contracts, and considered interfaces.",
     "The two projects on this page are where that work lives. Taskora AI is a multi-tenant platform with role-based access and human-approved AI workflows. ShortMetric is a focused study in data-heavy UI, URL shortening, and click analytics.",
   ],
@@ -158,5 +168,5 @@ export const about = {
 };
 
 export const contact = {
-  lead: "I'm currently seeking entry-level opportunities as a Python Developer, Full Stack Developer, Django Developer, or Junior Software Engineer.",
+  lead: "I\u2019m currently seeking entry-level opportunities as a Python Developer, Full Stack Developer, Django Developer, or Junior Software Engineer.",
 };
