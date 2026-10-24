@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 import { Github, Linkedin } from "../icons/BrandIcons.jsx";
 import { profile } from "../../config/portfolio.js";
 import Button from "../ui/Button.jsx";
@@ -40,7 +40,9 @@ export default function Hero() {
           <Button href="#contact" variant="secondary" size="md">
             Get in Touch
           </Button>
-          <div className="ml-2 flex items-center gap-1">
+          
+          {/* New Contact Links */}
+          <div className="flex items-center gap-1 sm:ml-2">
             <a
               href={profile.links.github}
               target="_blank"
@@ -58,6 +60,13 @@ export default function Hero() {
               className="rounded-md p-2 text-muted transition-colors hover:bg-sunken hover:text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-focus"
             >
               <Linkedin size={18} />
+            </a>
+            <a
+              href={`mailto:${profile.email}`}
+              aria-label="Send email"
+              className="rounded-md p-2 text-muted transition-colors hover:bg-sunken hover:text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-focus"
+            >
+              <Mail size={18} />
             </a>
           </div>
         </div>

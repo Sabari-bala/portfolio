@@ -1,5 +1,4 @@
 // Centralized portfolio content.
-// Final recruiter-focused accuracy pass.
 
 export const profile = {
   name: "Sabari Bala M R",
@@ -8,18 +7,18 @@ export const profile = {
   location: "Chennai, India",
   email: "sabaribala7733@gmail.com",
   links: {
-    linkedin: "https://www.linkedin.com/in/sabari-bala",
+    linkedin: "https://linkedin.com/in/sabari-bala",
     github: "https://github.com/Sabari-bala",
   },
   hero: {
     eyebrow: "Python Full Stack Developer",
     intro:
       "I build secure, well-tested full-stack apps with Django REST Framework, React, and PostgreSQL. My latest project, Taskora AI, is a multi-tenant workspace with five-role access control, where AI suggestions need human approval before anything is saved.",
-    availability: "Available immediately ? Chennai, Bengaluru or Remote",
+    availability: "Available immediately \u00B7 Chennai, Bengaluru or Remote",
     proofs: [
-      { value: "200", label: "tests ? 94% coverage" },
+      { value: "200", label: "tests \u00B7 94% coverage" },
       { value: "2", label: "live full-stack apps" },
-      { value: "5", label: "role access control" },
+      { value: "5", label: "5-role access control" },
     ],
     workingWith: ["Python", "Django", "Django REST Framework", "React", "PostgreSQL", "JWT authentication", "Groq API"],
   },
@@ -39,19 +38,19 @@ export const projects = [
     name: "Taskora AI",
     eyebrow: "Multi-tenant SaaS / AI-assisted",
     summary:
-      "AI-assisted project management platform that helps teams turn project ideas into structured plans, review proposed tasks, and manage work in a workspace.",
+      "AI-assisted project workspace where every AI suggestion needs human approval. Turn an idea into a plan, review it, then manage the work on a Kanban board.",
     highlights: [
       "Workspace-scoped querysets and object-level permissions across five roles, tested with a role x action matrix.",
       "AI-generated plans are normalized and validated against JSON Schema, then reviewed by the user before anything is saved.",
-      "JWT auth with in-memory access tokens and HttpOnly refresh cookies.",
+      "Kanban board with drag-and-drop, optimistic updates and automatic rollback when a request fails.",
       "200 automated backend tests with 94% coverage, run in GitHub Actions CI.",
     ],
     decisions: [
-      "Built a three-layer backend (Views, Serializers, Services) to keep complex business logic entirely testable without HTTP.",
-      "Engineered an LLM normalizer layer to map variable JSON key names to expected schemas.",
-      "Fixed logins being dropped by third-party cookie blocking by proxying /api through Vercel, so the refresh cookie is first-party.",
+      "Built a three-layer backend (Views, Serializers, Services) to keep business logic testable without HTTP.",
+      "Added an LLM normalizer layer that maps variable JSON key names to the expected schema (for example \"name\" to \"title\") before validation.",
+      "Kept access tokens in memory with HttpOnly refresh cookies; fixed third-party cookie blocking by proxying /api through Vercel so the cookie is first-party.",
     ],
-    demoNotice: "Demo logins are in the repository README.",
+    demoNotice: "Demo login (Owner): sabari@taskora.local / StrongPass!2026",
     stack: [
       "Python",
       "Django",
@@ -63,7 +62,8 @@ export const projects = [
       "Tailwind CSS",
       "dnd-kit",
       "SimpleJWT",
-      "Groq API"
+      "Groq API",
+      "pytest"
     ],
     repository: "https://github.com/Sabari-bala/taskora-ai",
     live: "https://taskora-ai-delta.vercel.app",
@@ -76,16 +76,17 @@ export const projects = [
     summary:
       "ShortMetric is a link management and analytics platform with a data-heavy dashboard, custom aliases, QR codes and per-user data isolation.",
     highlights: [
-      "URL shortening, custom aliases, expiration controls, and QR code generation.",
+      "URL shortening with custom aliases, expiration dates and QR code generation (PNG download).",
       "User-scoped link management with DRF token authentication.",
-      "Interactive Recharts dashboard transforms raw click events into device and referrer breakdowns.",
+      "Recharts dashboard showing click activity over time and device, browser and operating-system breakdowns.",
       "Backend tests and GitHub Actions CI (Django checks, tests and a Vite production build).",
     ],
     decisions: [
-      "Diagnosed and resolved a Vercel build failure caused by PowerShell injecting invisible Byte Order Marks (BOM).",
-      "Debugged PaaS deployment issues, including CORS misconfigurations and duplicated API routing.",
+      "Built a custom User-Agent parser to capture browser, device and OS without an external parsing library.",
+      "Fixed a Vercel build failure caused by invisible UTF-8 byte-order marks added by PowerShell.",
+      "Resolved CORS and duplicated /api/api/ routing issues while deploying to Render and Vercel.",
     ],
-    demoNotice: "Demo logins are in the repository README.",
+    demoNotice: "Register a free account to try it.",
     stack: [
       "Python",
       "Django",
@@ -97,7 +98,8 @@ export const projects = [
       "Tailwind CSS",
       "Recharts",
       "Axios",
-      "qrcode.react"
+      "qrcode.react",
+      "GitHub Actions"
     ],
     repository: "https://github.com/Sabari-bala/ShortMetric",
     live: "https://shortmetric.vercel.app",
@@ -176,5 +178,3 @@ export const about = {
 export const contact = {
   lead: "I\u2019m currently seeking entry-level opportunities as a Python Developer, Full Stack Developer, Django Developer, or Junior Software Engineer.",
 };
-
-
