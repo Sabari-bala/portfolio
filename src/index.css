@@ -16,10 +16,10 @@
   --color-line: #ececf0;
   --color-line-strong: #d4d4d8;
 
-  --color-accent: #059669;
-  --color-accent-hover: #047857;
+  --color-accent: #047857;
+  --color-accent-hover: #065f46;
   --color-accent-soft: #ecfdf5;
-  --color-accent-text: #047857;
+  --color-accent-text: #065f46;
   --color-focus: #10b981;
 }
 
