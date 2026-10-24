@@ -1,5 +1,5 @@
 // Centralized portfolio content.
-// Final verified accuracy pass based on strict codebase audit.
+// Final recruiter-focused accuracy pass.
 
 export const profile = {
   name: "Sabari Bala M R",
@@ -14,14 +14,14 @@ export const profile = {
   hero: {
     eyebrow: "Python Full Stack Developer",
     intro:
-      "I build secure, well-tested web apps with Django, DRF, React, and PostgreSQL. I care about permissions, clean API contracts, and interfaces that hold up under real use.",
+      "I build secure, well-tested web apps with Django, DRF, React, and PostgreSQL. I focus on API design, authorization, and practical full-stack development.",
     workingWith: ["Python", "Django", "React", "PostgreSQL"],
   },
 };
 
 export const navigation = [
-  { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
+  { label: "Skills", href: "#skills" },
   { label: "About", href: "#about" },
   { label: "Approach", href: "#approach" },
   { label: "Contact", href: "#contact" },
@@ -33,12 +33,12 @@ export const projects = [
     name: "Taskora AI",
     eyebrow: "Multi-tenant SaaS / AI-assisted",
     summary:
-      "Production-style project management platform where AI acts as a planning co-pilot. Features 5-role access control and human approval before saving to the database.",
+      "AI-assisted project management platform that helps teams turn project ideas into structured plans, review proposed tasks, and manage work in a workspace.",
     highlights: [
-      "Multi-tenant 5-role RBAC (Owner, Admin, Manager, Member, Viewer) with tenant isolation at the queryset level.",
-      "AI co-pilot uses strict JSON Schema validation; zero AI writes hit the database without user approval.",
-      "Optimistic Kanban board built with dnd-kit and TanStack Query, featuring automatic rollback on API failure.",
-      "Secure JWT auth with in-memory access tokens and HttpOnly refresh cookies, covered by 200 tests (94% coverage).",
+      "Workspace-level permissions and five-role RBAC enforced at the queryset level.",
+      "AI-generated project plans and task breakdowns validated against strict JSON Schema before user approval.",
+      "Kanban-based task management with optimistic UI updates and automatic rollback on API failure.",
+      "Django REST Framework backend with secure auth using in-memory access tokens and HttpOnly refresh cookies.",
     ],
     decisions: [
       "Built a three-layer backend (Views, Serializers, Services) to keep complex business logic entirely testable without HTTP.",
@@ -67,16 +67,16 @@ export const projects = [
     name: "ShortMetric",
     eyebrow: "URL shortener / Click analytics",
     summary:
-      "Full-stack SaaS-style link management and click analytics platform. Features secure token auth, custom URL aliases, dynamic QR codes, and interactive dashboards with device and browser breakdowns.",
+      "Full-stack SaaS link management and click analytics platform. Features URL shortening, custom aliases, and interactive data visualizations.",
     highlights: [
-      "Secure token-based authentication, link management (CRUD), custom aliases, expiration controls, and dynamic QR code generation.",
-      "Interactive analytics dashboard uses Recharts to transform raw click events into time-series, device, and referrer breakdowns.",
-      "Backend querysets enforce strict per-user data isolation; React frontend uses protected routing and Axios interceptors.",
-      "Built a custom User-Agent parser from raw request strings to capture deep click metadata without external dependencies.",
+      "URL shortening, custom aliases, link expiration controls, and QR code generation.",
+      "Implemented DRF token authentication and user-scoped link management. The React client attaches credentials to API requests.",
+      "Interactive Recharts dashboard transforms raw click events into time-series, device, and referrer breakdowns.",
+      "Built a custom User-Agent parser from raw request strings to capture deep click metadata.",
     ],
     decisions: [
       "Diagnosed and resolved a Vercel build failure caused by Windows PowerShell injecting invisible Byte Order Marks (BOM) into files.",
-      "Debugged critical PaaS deployment issues, including CORS misconfigurations and duplicated API path routing (/api/api/), ensuring smooth communication between Vercel and Render.",
+      "Debugged PaaS deployment issues, including CORS misconfigurations and duplicated API paths, ensuring smooth Vercel-Render communication.",
     ],
     stack: [
       "Python",
@@ -101,52 +101,52 @@ export const projects = [
 export const skillGroups = [
   {
     label: "Backend",
-    items: ["Python", "Django", "Django REST Framework", "REST APIs", "SimpleJWT", "RBAC", "drf-spectacular"],
+    items: ["Python", "Django", "Django REST Framework"],
   },
   {
     label: "Frontend",
-    items: ["React", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "React Router", "TanStack Query", "Radix UI"],
+    items: ["JavaScript", "React", "HTML5", "CSS3", "Tailwind CSS"],
   },
   {
-    label: "Data & Testing",
-    items: ["PostgreSQL", "SQLite", "SQL", "pytest", "pytest-django", "Factory Boy"],
+    label: "Database",
+    items: ["SQL", "PostgreSQL", "SQLite"],
+  },
+  {
+    label: "Testing & API",
+    items: ["pytest", "Factory Boy", "Axios", "TanStack Query"],
   },
   {
     label: "Tools & Deployment",
-    items: ["Git", "GitHub", "GitHub Actions", "Vite", "Axios", "Vercel", "Render", "Neon", "Gunicorn"],
+    items: ["Git", "GitHub", "Vite", "Vercel", "Render", "Neon"],
   },
 ];
 
 export const approach = [
   {
-    title: "Understand before implementing",
-    body: "Data model, permissions, and failure modes are settled before any UI is built.",
-  },
-  {
     title: "Clear API contracts",
-    body: "Endpoints are designed around resources with predictable shapes, so the frontend and backend move independently.",
+    body: "Endpoints are designed around resources with predictable shapes, separating frontend and backend responsibilities.",
   },
   {
-    title: "Permissions in the backend",
-    body: "Authorization is a database and API concern. Hiding a button is not a permission. Refusing the request is.",
+    title: "Backend authorization",
+    body: "Authorization is enforced at the database and API level. User-level data isolation is a core requirement, not an afterthought.",
   },
   {
-    title: "Validate at every boundary",
-    body: "Inputs from the browser, the AI layer, and external services are validated before they reach the database.",
+    title: "Validation at every boundary",
+    body: "Incoming data and AI-generated output are strictly validated before reaching the database.",
   },
   {
-    title: "Test the paths where failures matter",
-    body: "Coverage is concentrated on auth, permissions, business rules, and analytics, where a silent bug becomes a security or reporting problem.",
+    title: "Automated testing",
+    body: "Testing focuses on core business rules, permissions, and edge cases where silent bugs become security or reporting problems.",
   },
   {
-    title: "Environment-based configuration",
-    body: "Secrets, database URLs, and API keys live in environment variables, not in code.",
+    title: "Environment-based config",
+    body: "Secrets and API keys live in environment variables, ensuring safe deployment and reproducible setups.",
   },
 ];
 
 export const about = {
   paragraphs: [
-    "I?m an entry-level Python Full Stack Developer based in Chennai. I studied Biotechnology (B.Sc.) before training in Python Full Stack Development at QSpiders. That background taught me to work carefully with data, test assumptions, and document what I find, and I bring the same habits to debugging and data modeling.",
+    "I'm an entry-level Python Full Stack Developer based in Chennai. I studied Biotechnology (B.Sc.) before training in Python Full Stack Development at QSpiders. That background taught me to work carefully with data, test assumptions, and document what I find, and I bring the same habits to debugging and data modeling.",
     "I work primarily with Django, Django REST Framework, React, and PostgreSQL. The part of engineering I focus on is the part that holds up under real use: workspace permissions, clean API contracts, and considered interfaces.",
     "The two projects on this page are where that work lives. Taskora AI is a multi-tenant platform with role-based access and human-approved AI workflows. ShortMetric is a focused study in data-heavy UI, URL shortening, and click analytics.",
   ],
@@ -159,5 +159,5 @@ export const about = {
 };
 
 export const contact = {
-  lead: "Available immediately. Open to roles in Chennai, Bengaluru, or Remote.",
+  lead: "Seeking entry-level opportunities as a Python Developer, Full Stack Developer, Django Developer, or Junior Software Developer.",
 };

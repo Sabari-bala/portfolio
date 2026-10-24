@@ -24,21 +24,21 @@ export default function App() {
         <Hero />
 
         <Section
-          id="skills"
-          eyebrow="Skills"
-          title="Technical skills"
-          description="The core technologies and tools I use to build full-stack applications."
-        >
-          <Skills />
-        </Section>
-
-        <Section
           id="projects"
           eyebrow="Work"
           title="Featured projects"
           description="Two full-stack applications built end to end, with a focus on secure APIs, clean data modeling, and reliable interfaces."
         >
           <Projects />
+        </Section>
+
+        <Section
+          id="skills"
+          eyebrow="Skills"
+          title="Technical skills"
+          description="The core technologies and tools I use to build full-stack applications."
+        >
+          <Skills />
         </Section>
 
         <Section id="about" eyebrow="About" title="Background and focus">
@@ -68,4 +68,3 @@ export default function App() {
     </div>
   );
 }
-
