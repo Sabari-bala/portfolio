@@ -36,7 +36,7 @@ export default function App() {
           id="skills"
           eyebrow="Skills"
           title="Technical skills"
-          description="The core technologies and tools I use to build full-stack applications."
+          description="The core technologies I use to build full-stack applications."
         >
           <Skills />
         </Section>
@@ -49,7 +49,7 @@ export default function App() {
           id="approach"
           eyebrow="Approach"
           title="Engineering approach"
-          description="The principles I bring to every project, regardless of size."
+          description="The principles I bring to every project."
         >
           <Approach />
         </Section>
@@ -58,7 +58,7 @@ export default function App() {
           id="contact"
           eyebrow="Contact"
           title="Get in touch"
-          description="Available immediately. Open to roles in Chennai, Bengaluru, or Remote."
+          description="Let's discuss how I can contribute to your engineering team."
         >
           <Contact />
         </Section>

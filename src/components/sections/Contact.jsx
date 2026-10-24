@@ -14,14 +14,16 @@ const arrowClass =
   "text-faint transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5";
 
 export default function Contact() {
-  // Opens a clean Gmail compose window with no subject pre-filled
   const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${profile.email}`;
 
   return (
     <div className="grid gap-6 lg:grid-cols-[1.2fr_1fr] lg:gap-12">
       <div>
-        <p className="max-w-md text-[14px] leading-relaxed text-muted">
+        <p className="max-w-md text-[15px] font-medium leading-relaxed text-ink">
           {contact.lead}
+        </p>
+        <p className="mt-2 max-w-md text-[14px] leading-relaxed text-muted">
+          Available immediately. Open to roles in Chennai, Bengaluru, or Remote.
         </p>
 
         <div className="mt-5">

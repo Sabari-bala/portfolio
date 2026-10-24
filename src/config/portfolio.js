@@ -36,13 +36,13 @@ export const projects = [
       "AI-assisted project management platform that helps teams turn project ideas into structured plans, review proposed tasks, and manage work in a workspace.",
     highlights: [
       "Workspace-level permissions and five-role RBAC enforced at the queryset level.",
-      "AI-generated project plans and task breakdowns validated against strict JSON Schema before user approval.",
-      "Kanban-based task management with optimistic UI updates and automatic rollback on API failure.",
-      "Django REST Framework backend with secure auth using in-memory access tokens and HttpOnly refresh cookies.",
+      "AI-generated plans validated against JSON Schema before user approval.",
+      "Kanban task management with optimistic UI updates and automatic rollback on failure.",
+      "Secure JWT auth using in-memory access tokens and HttpOnly refresh cookies.",
     ],
     decisions: [
       "Built a three-layer backend (Views, Serializers, Services) to keep complex business logic entirely testable without HTTP.",
-      "Engineered an LLM normalizer layer to map variable JSON key names to expected schemas, significantly reducing schema validation failures.",
+      "Engineered an LLM normalizer layer to map variable JSON key names to expected schemas.",
     ],
     stack: [
       "Python",
@@ -51,7 +51,6 @@ export const projects = [
       "PostgreSQL",
       "React",
       "Vite",
-      "React Router",
       "TanStack Query",
       "Tailwind CSS",
       "dnd-kit",
@@ -69,14 +68,14 @@ export const projects = [
     summary:
       "Full-stack SaaS link management and click analytics platform. Features URL shortening, custom aliases, and interactive data visualizations.",
     highlights: [
-      "URL shortening, custom aliases, link expiration controls, and QR code generation.",
-      "Implemented DRF token authentication and user-scoped link management. The React client attaches credentials to API requests.",
-      "Interactive Recharts dashboard transforms raw click events into time-series, device, and referrer breakdowns.",
+      "URL shortening, custom aliases, expiration controls, and QR code generation.",
+      "User-scoped link management with DRF token authentication.",
+      "Interactive Recharts dashboard transforms raw click events into device and referrer breakdowns.",
       "Built a custom User-Agent parser from raw request strings to capture deep click metadata.",
     ],
     decisions: [
-      "Diagnosed and resolved a Vercel build failure caused by Windows PowerShell injecting invisible Byte Order Marks (BOM) into files.",
-      "Debugged PaaS deployment issues, including CORS misconfigurations and duplicated API paths, ensuring smooth Vercel-Render communication.",
+      "Diagnosed and resolved a Vercel build failure caused by PowerShell injecting invisible Byte Order Marks (BOM).",
+      "Debugged PaaS deployment issues, including CORS misconfigurations and duplicated API routing.",
     ],
     stack: [
       "Python",
@@ -85,9 +84,8 @@ export const projects = [
       "PostgreSQL",
       "React",
       "Vite",
-      "React Router",
-      "Tailwind CSS",
       "TanStack Query",
+      "Tailwind CSS",
       "Recharts",
       "Axios",
       "qrcode.react"
@@ -98,26 +96,27 @@ export const projects = [
   },
 ];
 
+// Streamlined to EXACTLY what HR filters for
 export const skillGroups = [
   {
+    label: "Languages",
+    items: ["Python", "JavaScript", "SQL"],
+  },
+  {
     label: "Backend",
-    items: ["Python", "Django", "Django REST Framework"],
+    items: ["Django", "Django REST Framework", "REST APIs"],
   },
   {
     label: "Frontend",
-    items: ["JavaScript", "React", "HTML5", "CSS3", "Tailwind CSS"],
+    items: ["React", "Tailwind CSS", "HTML/CSS"],
   },
   {
     label: "Database",
-    items: ["SQL", "PostgreSQL", "SQLite"],
+    items: ["PostgreSQL", "SQLite"],
   },
   {
-    label: "Testing & API",
-    items: ["pytest", "Factory Boy", "Axios", "TanStack Query"],
-  },
-  {
-    label: "Tools & Deployment",
-    items: ["Git", "GitHub", "Vite", "Vercel", "Render", "Neon"],
+    label: "Tools & Testing",
+    items: ["Git", "GitHub", "Vercel", "Render", "pytest"],
   },
 ];
 
@@ -128,7 +127,7 @@ export const approach = [
   },
   {
     title: "Backend authorization",
-    body: "Authorization is enforced at the database and API level. User-level data isolation is a core requirement, not an afterthought.",
+    body: "Authorization is enforced at the database and API level. User-level data isolation is a core requirement.",
   },
   {
     title: "Validation at every boundary",
@@ -136,7 +135,7 @@ export const approach = [
   },
   {
     title: "Automated testing",
-    body: "Testing focuses on core business rules, permissions, and edge cases where silent bugs become security or reporting problems.",
+    body: "Testing focuses on core business rules, permissions, and edge cases where silent bugs become security problems.",
   },
   {
     title: "Environment-based config",
@@ -159,5 +158,5 @@ export const about = {
 };
 
 export const contact = {
-  lead: "Seeking entry-level opportunities as a Python Developer, Full Stack Developer, Django Developer, or Junior Software Developer.",
+  lead: "I'm currently seeking entry-level opportunities as a Python Developer, Full Stack Developer, Django Developer, or Junior Software Engineer.",
 };
