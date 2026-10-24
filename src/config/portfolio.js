@@ -164,7 +164,7 @@ export const approach = [
 
 export const about = {
   paragraphs: [
-    "I’m an entry-level Python Full Stack Developer based in Chennai. I studied Biotechnology (B.Sc.) before training in Python Full Stack Development at QSpiders. That background taught me to work carefully with data, test assumptions, and document what I find, and I bring the same habits to debugging and data modeling.",
+    "I’m an entry-level Python Full Stack Developer based in Chennai. I earned a B.Sc. in Biotechnology before training in Python Full Stack Development at QSpiders. That background taught me to work carefully with data, test assumptions, and document what I find, and I bring the same habits to debugging and data modeling.",
     "I work primarily with Django, Django REST Framework, React, and PostgreSQL. I focus on the parts of engineering that hold up under real use: workspace permissions, clean API contracts, and reliable interfaces.",
     "The two projects on this page are where that work lives. Taskora AI is a multi-tenant platform with role-based access and human-approved AI workflows. ShortMetric is a link analytics platform with a data-heavy dashboard, QR codes, and per-user data isolation.",
     "I use AI coding assistants for planning, code review, and debugging. I review and test everything I ship, and I can explain how each part of my projects works."
