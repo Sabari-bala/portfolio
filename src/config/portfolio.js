@@ -50,7 +50,7 @@ export const projects = [
       "Added an LLM normalizer layer that maps variable JSON key names to the expected schema (for example “name” to “title”) before validation.",
       "Kept access tokens in memory with HttpOnly refresh cookies; fixed third-party cookie blocking by proxying /api through Vercel so the cookie is first-party.",
     ],
-    demoNotice: "Demo login (Owner): sabari@taskora.local / StrongPass!2026",
+    demoNotice: "Demo login: sabari@taskora.local / StrongPass!2026",
     stack: [
       "Python",
       "Django",
