@@ -87,7 +87,7 @@ export const projects = [
       "Fixed a Vercel build failure caused by invisible UTF-8 byte-order marks added by PowerShell.",
       "Resolved CORS and duplicated /api/api/ routing issues while deploying to Render and Vercel.",
     ],
-    demoNotice: "Register a free account to try it.",
+    demoNotice: "Demo login: SabariBalaMR / ShortMetric@2026",
     stack: [
       "Python",
       "Django",
