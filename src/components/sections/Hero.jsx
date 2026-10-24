@@ -4,6 +4,8 @@ import { profile } from "../../config/portfolio.js";
 import Button from "../ui/Button.jsx";
 
 export default function Hero() {
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${profile.email}`;
+
   return (
     <section className="relative overflow-hidden bg-paper">
       <div
@@ -61,8 +63,10 @@ export default function Hero() {
               <Linkedin size={18} />
             </a>
             <a
-              href={`mailto:${profile.email}`}
-              aria-label="Send email"
+              href={gmailUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Compose email in Gmail"
               className="rounded-md p-2 text-muted transition-colors hover:bg-sunken hover:text-[#EA4335] focus:outline-none focus-visible:ring-2 focus-visible:ring-focus"
             >
               <Mail size={18} />
