@@ -17,12 +17,13 @@ export default function Contact() {
   const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${profile.email}`;
 
   return (
-    <div className="grid gap-6 lg:grid-cols-[1.2fr_1fr] lg:gap-12">
-      <div>
-        <p className="max-w-md text-[15px] font-medium leading-relaxed text-ink">
+    <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:gap-12">
+      {/* Max width applied here to prevent the text from stretching across ultra-wide screens */}
+      <div className="max-w-[640px]">
+        <p className="text-[15px] font-medium leading-relaxed text-ink">
           {contact.lead}
         </p>
-        <p className="mt-2 max-w-md text-[14px] leading-relaxed text-muted">
+        <p className="mt-2 text-[14px] leading-relaxed text-muted">
           {contact.availability}
         </p>
 
@@ -41,7 +42,7 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className="grid gap-2 self-start">
+      <div className="grid w-full gap-2 self-start sm:min-w-[320px] lg:w-[360px]">
         <a
           href={profile.links.linkedin}
           target="_blank"
