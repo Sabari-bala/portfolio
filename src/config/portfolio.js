@@ -79,7 +79,7 @@ export const projects = [
       "Diagnosed and resolved a Vercel build failure caused by PowerShell injecting invisible Byte Order Marks (BOM).",
       "Debugged PaaS deployment issues, including CORS misconfigurations and duplicated API routing.",
     ],
-    demoNotice: "Register a free account to try it.",
+    demoNotice: "Demo logins are in the repository README.",
     stack: [
       "Python",
       "Django",
@@ -170,3 +170,4 @@ export const about = {
 export const contact = {
   lead: "I\u2019m currently seeking entry-level opportunities as a Python Developer, Full Stack Developer, Django Developer, or Junior Software Engineer.",
 };
+
