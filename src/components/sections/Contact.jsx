@@ -23,7 +23,7 @@ export default function Contact() {
           {contact.lead}
         </p>
         <p className="mt-2 max-w-md text-[14px] leading-relaxed text-muted">
-          Available immediately. Open to roles in Chennai, Bengaluru, or Remote.
+          {contact.availability}
         </p>
 
         <div className="mt-5">
@@ -53,7 +53,7 @@ export default function Contact() {
             <Linkedin size={16} className="text-muted" />
             <span>
               <span className="block text-[13px] font-medium text-ink">LinkedIn</span>
-              <span className="block text-[11px] text-faint">
+              <span className="block text-[11px] text-muted">
                 {displayUrl(profile.links.linkedin)}
               </span>
             </span>
@@ -72,7 +72,7 @@ export default function Contact() {
             <Github size={16} className="text-muted" />
             <span>
               <span className="block text-[13px] font-medium text-ink">GitHub</span>
-              <span className="block text-[11px] text-faint">
+              <span className="block text-[11px] text-muted">
                 {displayUrl(profile.links.github)}
               </span>
             </span>

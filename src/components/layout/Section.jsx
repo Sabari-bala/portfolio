@@ -15,7 +15,7 @@ export default function Section({
         {(eyebrow || title || description) && (
           <header className="mb-3 max-w-2xl sm:mb-4">
             {eyebrow && (
-              <p className="text-[11px] font-medium uppercase tracking-[0.14em] text-faint">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-muted">
                 {eyebrow}
               </p>
             )}

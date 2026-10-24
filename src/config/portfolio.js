@@ -18,7 +18,7 @@ export const profile = {
     proofs: [
       { value: "200", label: "tests \u00B7 94% coverage" },
       { value: "2", label: "live full-stack apps" },
-      { value: "5", label: "5-role access control" },
+      { value: "5", label: "ACCESS ROLES (RBAC)" },
     ],
     workingWith: ["Python", "Django", "Django REST Framework", "React", "PostgreSQL", "JWT authentication", "Groq API"],
   },
@@ -47,7 +47,7 @@ export const projects = [
     ],
     decisions: [
       "Built a three-layer backend (Views, Serializers, Services) to keep business logic testable without HTTP.",
-      "Added an LLM normalizer layer that maps variable JSON key names to the expected schema (for example \"name\" to \"title\") before validation.",
+      "Added an LLM normalizer layer that maps variable JSON key names to the expected schema (for example “name” to “title”) before validation.",
       "Kept access tokens in memory with HttpOnly refresh cookies; fixed third-party cookie blocking by proxying /api through Vercel so the cookie is first-party.",
     ],
     demoNotice: "Demo login (Owner): sabari@taskora.local / StrongPass!2026",
@@ -63,7 +63,8 @@ export const projects = [
       "dnd-kit",
       "SimpleJWT",
       "Groq API",
-      "pytest"
+      "pytest",
+      "GitHub Actions"
     ],
     repository: "https://github.com/Sabari-bala/taskora-ai",
     live: "https://taskora-ai-delta.vercel.app",
@@ -114,7 +115,7 @@ export const skillGroups = [
   },
   {
     label: "Backend",
-    items: ["Django", "Django REST Framework", "REST APIs", "JWT authentication (SimpleJWT)", "role-based access control"],
+    items: ["Django", "Django REST Framework", "REST API design", "JWT authentication (SimpleJWT)", "Role-based access control"],
   },
   {
     label: "AI integration",
@@ -122,50 +123,51 @@ export const skillGroups = [
   },
   {
     label: "Frontend",
-    items: ["React", "TanStack Query", "Tailwind CSS", "HTML/CSS"],
+    items: ["React", "React Router", "TanStack Query", "Tailwind CSS", "Axios", "Recharts", "HTML/CSS"],
   },
   {
     label: "Database",
-    items: ["PostgreSQL", "SQLite"],
+    items: ["PostgreSQL", "SQLite", "Django ORM"],
   },
   {
     label: "Tools & testing",
-    items: ["Git", "GitHub", "GitHub Actions (CI)", "pytest", "Factory Boy", "Vercel", "Render", "Neon"],
+    items: ["Git", "GitHub", "GitHub Actions (CI)", "pytest", "Factory Boy", "pre-commit", "Vercel", "Render", "Neon"],
   },
 ];
 
 export const approach = [
   {
     title: "Clear API contracts",
-    body: "Endpoints are designed around resources with predictable shapes, separating frontend and backend responsibilities.",
+    body: "Endpoints are designed around resources with predictable shapes, keeping frontend and backend responsibilities separate.",
   },
   {
     title: "Backend authorization",
-    body: "Authorization is enforced at the database and API level. User-level data isolation is a core requirement.",
+    body: "Authorization is enforced in the API and query layers, not in the UI. Workspace and user-level data isolation are core requirements.",
   },
   {
     title: "Validation at every boundary",
-    body: "Incoming data and AI-generated output are strictly validated before reaching the database.",
+    body: "Incoming data and AI-generated output are validated before they are saved.",
   },
   {
     title: "Automated testing",
-    body: "Testing focuses on core business rules, permissions, and edge cases where silent bugs become security problems.",
+    body: "Tests focus on permissions, authentication, business rules, and failure paths, where silent bugs become security problems.",
   },
   {
     title: "Environment-based config",
-    body: "Secrets and API keys live in environment variables, ensuring safe deployment and reproducible setups.",
+    body: "Secrets and API keys live in environment variables, never in the repository.",
   },
   {
-    title: "Maintainable architecture",
-    body: "Code is structured with clear separation of concerns, making it easier to onboard new developers and scale.",
+    title: "Debugging in production",
+    body: "Deployment issues such as cookies, CORS, routing, and file encoding are traced to their root cause and fixed there.",
   },
 ];
 
 export const about = {
   paragraphs: [
-    "I\u2019m an entry-level Python Full Stack Developer based in Chennai. I studied Biotechnology (B.Sc.) before training in Python Full Stack Development at QSpiders. That background taught me to work carefully with data, test assumptions, and document what I find, and I bring the same habits to debugging and data modeling.",
-    "I work primarily with Django, Django REST Framework, React, and PostgreSQL. The part of engineering I focus on is the part that holds up under real use: workspace permissions, clean API contracts, and considered interfaces.",
-    "The two projects on this page are where that work lives. Taskora AI is a multi-tenant platform with role-based access and human-approved AI workflows. ShortMetric is a focused study in data-heavy UI, URL shortening, and click analytics.",
+    "I’m an entry-level Python Full Stack Developer based in Chennai. I studied Biotechnology (B.Sc.) before training in Python Full Stack Development at QSpiders. That background taught me to work carefully with data, test assumptions, and document what I find, and I bring the same habits to debugging and data modeling.",
+    "I work primarily with Django, Django REST Framework, React, and PostgreSQL. I focus on the parts of engineering that hold up under real use: workspace permissions, clean API contracts, and reliable interfaces.",
+    "The two projects on this page are where that work lives. Taskora AI is a multi-tenant platform with role-based access and human-approved AI workflows. ShortMetric is a link analytics platform with a data-heavy dashboard, QR codes, and per-user data isolation.",
+    "I use AI coding assistants for planning, code review, and debugging. I review and test everything I ship, and I can explain how each part of my projects works."
   ],
   facts: [
     { label: "Location", value: "Chennai, India" },
@@ -176,5 +178,6 @@ export const about = {
 };
 
 export const contact = {
-  lead: "I\u2019m currently seeking entry-level opportunities as a Python Developer, Full Stack Developer, Django Developer, or Junior Software Engineer.",
+  lead: "I’m currently seeking entry-level opportunities as a Python Developer, Full Stack Developer, Django Developer, or Junior Software Engineer.",
+  availability: "Available immediately. Open to roles in Chennai, Bengaluru, or Remote."
 };

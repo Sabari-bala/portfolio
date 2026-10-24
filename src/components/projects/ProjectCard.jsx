@@ -57,7 +57,7 @@ export default function ProjectCard({ project }) {
             href={project.repository}
             target="_blank"
             rel="noopener noreferrer"
-            variant="dark"
+            variant="secondary"
             size="sm"
             aria-label={`View ${project.name} repository on GitHub (opens in a new tab)`}
           >
@@ -65,7 +65,7 @@ export default function ProjectCard({ project }) {
             View Repository
           </Button>
         ) : (
-          <span className="inline-flex items-center gap-1.5 rounded-md border border-dashed border-line-strong px-3 py-1.5 text-[12px] font-medium text-faint">
+          <span className="inline-flex items-center gap-1.5 rounded-md border border-dashed border-line-strong px-3 py-1.5 text-[12px] font-medium text-muted">
             View Repository coming soon
           </span>
         )}
@@ -82,7 +82,7 @@ export default function ProjectCard({ project }) {
             View Live
           </Button>
         ) : (
-          <span className="inline-flex items-center gap-1.5 rounded-md border border-dashed border-line-strong px-3 py-1.5 text-[12px] font-medium text-faint">
+          <span className="inline-flex items-center gap-1.5 rounded-md border border-dashed border-line-strong px-3 py-1.5 text-[12px] font-medium text-muted">
             View Live coming soon
           </span>
         )}
@@ -90,12 +90,12 @@ export default function ProjectCard({ project }) {
       
       {project.live && (
         <div className="mt-3 space-y-1">
-          <p className="flex items-center gap-1.5 text-[11px] text-faint">
+          <p className="flex items-center gap-1.5 text-[11px] text-muted">
             <Info size={12} aria-hidden="true" />
             Backend runs on a free tier. First load may take up to 60 seconds.
           </p>
           {project.demoNotice && (
-            <p className="text-[11px] text-faint">
+            <p className="text-[11px] text-muted">
               {project.demoNotice}
             </p>
           )}

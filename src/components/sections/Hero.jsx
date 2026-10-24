@@ -41,7 +41,6 @@ export default function Hero() {
             Get in Touch
           </Button>
           
-          {/* New Contact Links */}
           <div className="flex items-center gap-1 sm:ml-2">
             <a
               href={profile.links.github}
@@ -86,7 +85,7 @@ export default function Hero() {
         </div>
 
         <div className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2">
-          <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-faint">
+          <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-muted">
             Working with
           </span>
           <div className="flex flex-wrap items-center gap-1.5">

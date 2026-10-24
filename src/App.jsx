@@ -58,7 +58,7 @@ export default function App() {
           id="contact"
           eyebrow="Contact"
           title="Get in touch"
-          description="Let's discuss how I can contribute to your engineering team."
+          description="Let’s talk about how I can contribute to your team."
         >
           <Contact />
         </Section>
