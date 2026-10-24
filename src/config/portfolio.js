@@ -14,8 +14,14 @@ export const profile = {
   hero: {
     eyebrow: "Python Full Stack Developer",
     intro:
-      "I build secure, well-tested web apps with Django, DRF, React, and PostgreSQL. I focus on API design, authorization, and practical full-stack development.",
-    workingWith: ["Python", "Django", "React", "PostgreSQL"],
+      "I build secure, well-tested full-stack apps with Django REST Framework, React, and PostgreSQL. My latest project, Taskora AI, is a multi-tenant workspace with five-role access control, where AI suggestions need human approval before anything is saved.",
+    availability: "Available immediately ? Chennai, Bengaluru or Remote",
+    proofs: [
+      { value: "200", label: "tests ? 94% coverage" },
+      { value: "2", label: "live full-stack apps" },
+      { value: "5", label: "role access control" },
+    ],
+    workingWith: ["Python", "Django", "Django REST Framework", "React", "PostgreSQL", "JWT authentication", "Groq API"],
   },
 };
 
@@ -170,4 +176,5 @@ export const about = {
 export const contact = {
   lead: "I\u2019m currently seeking entry-level opportunities as a Python Developer, Full Stack Developer, Django Developer, or Junior Software Engineer.",
 };
+
 
