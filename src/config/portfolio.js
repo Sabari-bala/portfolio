@@ -40,7 +40,7 @@ export const projects = [
     summary:
       "AI-assisted project workspace where every AI suggestion needs human approval. Turn an idea into a plan, review it, then manage the work on a Kanban board.",
     highlights: [
-      "Workspace-scoped querysets and object-level permissions across five roles, tested with a role x action matrix.",
+      "Workspace-scoped querysets and object-level permissions across five roles, tested with a role × action matrix.",
       "AI-generated plans are normalized and validated against JSON Schema, then reviewed by the user before anything is saved.",
       "Kanban board with drag-and-drop, optimistic updates and automatic rollback when a request fails.",
       "200 automated backend tests with 94% coverage, run in GitHub Actions CI.",
@@ -172,7 +172,7 @@ export const about = {
   facts: [
     { label: "Location", value: "Chennai, India" },
     { label: "Training", value: "Python Full Stack Development, QSpiders" },
-    { label: "Education", value: "B.Sc. Biotechnology, RVS College of Arts and Science" },
+    { label: "Education", value: "B.Sc. Biotechnology, RVS College of Arts and Science (2025)" },
     { label: "Focus", value: "Django REST Framework, React, PostgreSQL" },
   ],
 };
