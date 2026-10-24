@@ -9,7 +9,7 @@ export default function Skills() {
           className="grid gap-2 py-3 sm:grid-cols-[180px_1fr] sm:gap-10"
         >
           <div>
-            <h3 className="text-[11px] font-medium uppercase tracking-[0.14em] text-faint">
+            <h3 className="text-[11px] font-medium uppercase tracking-[0.14em] text-muted">
               {group.label}
             </h3>
           </div>

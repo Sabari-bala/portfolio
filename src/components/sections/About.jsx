@@ -15,13 +15,13 @@ export default function About() {
       </div>
 
       <aside className="h-fit rounded-lg border border-line bg-card p-6">
-        <h3 className="text-[11px] font-medium uppercase tracking-[0.14em] text-faint">
+        <h3 className="text-[11px] font-medium uppercase tracking-[0.14em] text-muted">
           At a glance
         </h3>
         <dl className="mt-4 space-y-3.5">
           {about.facts.map((fact) => (
             <div key={fact.label}>
-              <dt className="text-[11px] font-medium uppercase tracking-[0.12em] text-faint">
+              <dt className="text-[11px] font-medium uppercase tracking-[0.12em] text-muted">
                 {fact.label}
               </dt>
               <dd className="mt-1 text-[13px] leading-snug text-body">

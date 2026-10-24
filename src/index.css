@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -16,7 +16,6 @@
   --color-line: #ececf0;
   --color-line-strong: #d4d4d8;
 
-  /* Emerald Green Palette */
   --color-accent: #059669;
   --color-accent-hover: #047857;
   --color-accent-soft: #ecfdf5;
