@@ -16,7 +16,7 @@ export const profile = {
       "I build secure, well-tested full-stack apps with Django REST Framework, React, and PostgreSQL. My latest project, Taskora AI, is a multi-tenant workspace with five-role access control, where AI suggestions need human approval before anything is saved.",
     availability: "Available immediately \u00B7 Chennai, Bengaluru or Remote",
     proofs: [
-      { value: "200+", label: "automated backend tests" },
+      { value: "200+", label: "tests \u00B7 94% coverage" },
       { value: "2", label: "live full-stack apps" },
       { value: "5", label: "ACCESS ROLES (RBAC)" },
     ],
@@ -43,12 +43,12 @@ export const projects = [
       "Workspace-scoped querysets and object-level permissions across five roles, tested with a role × action matrix.",
       "AI-generated plans are normalized and validated against JSON Schema, then reviewed by the user before anything is saved.",
       "Kanban board with drag-and-drop, optimistic updates and automatic rollback when a request fails.",
-      "200+ automated backend tests, run in GitHub Actions CI.",
+      "200+ backend tests (94% coverage) and frontend tests (Vitest + RTL) run in GitHub Actions CI.",
     ],
     decisions: [
       "Built a three-layer backend (Views, Serializers, Services) to keep business logic testable without HTTP.",
       "Added an LLM normalizer layer that maps variable JSON key names to the expected schema (for example “name” to “title”) before validation.",
-      "Kept access tokens in memory with HttpOnly refresh cookies; fixed third-party cookie blocking by proxying /api through Vercel so the cookie is first-party.",
+      "Kept access tokens in memory with HttpOnly refresh cookies; fixed third-party cookie blocking by proxying /api through Vercel, and fixed a rogue SECURE_SSL_REDIRECT bug failing 100+ tests.",
     ],
     demoNotice: "Demo login: sabari@taskora.local / StrongPass!2026",
     stack: [
@@ -80,12 +80,12 @@ export const projects = [
       "URL shortening with custom aliases, expiration dates and QR code generation (PNG download).",
       "User-scoped link management with DRF token authentication.",
       "Recharts dashboard showing click activity over time and device, browser and operating-system breakdowns.",
-      "Backend tests and GitHub Actions CI (Django checks, tests and a Vite production build).",
+      "18 automated backend tests and GitHub Actions CI (Django checks, tests and a Vite production build).",
     ],
     decisions: [
       "Built a custom User-Agent parser to capture browser, device and OS without an external parsing library.",
       "Fixed a Vercel build failure caused by invisible UTF-8 byte-order marks added by PowerShell.",
-      "Resolved CORS and duplicated /api/api/ routing issues while deploying to Render and Vercel.",
+      "Fixed Vercel SPA 404 errors on browser refresh by configuring vercel.json rewrites. Acknowledged V2 trade-offs: DRF tokens do not expire, and public redirects need rate limiting.",
     ],
     demoNotice: "Demo login: SabariBalaMR / ShortMetric@2026",
     stack: [
