@@ -16,7 +16,7 @@ export const profile = {
       "I build secure, well-tested full-stack apps with Django REST Framework, React, and PostgreSQL. My latest project, Taskora AI, is a multi-tenant workspace with five-role access control, where AI suggestions need human approval before anything is saved.",
     availability: "Available immediately \u00B7 Chennai, Bengaluru or Remote",
     proofs: [
-      { value: "200", label: "tests \u00B7 94% coverage" },
+      { value: "200+", label: "automated backend tests" },
       { value: "2", label: "live full-stack apps" },
       { value: "5", label: "ACCESS ROLES (RBAC)" },
     ],
@@ -43,7 +43,7 @@ export const projects = [
       "Workspace-scoped querysets and object-level permissions across five roles, tested with a role × action matrix.",
       "AI-generated plans are normalized and validated against JSON Schema, then reviewed by the user before anything is saved.",
       "Kanban board with drag-and-drop, optimistic updates and automatic rollback when a request fails.",
-      "200 automated backend tests with 94% coverage, run in GitHub Actions CI.",
+      "200+ automated backend tests, run in GitHub Actions CI.",
     ],
     decisions: [
       "Built a three-layer backend (Views, Serializers, Services) to keep business logic testable without HTTP.",
