@@ -37,7 +37,7 @@ A full-stack URL-shortening and click-analytics platform that helps users manage
 
 - **Frontend:** React, Vite, Tailwind CSS, JavaScript
 - **Backend:** Python, Django, Django REST Framework
-- **Database:** SQLite for development, with PostgreSQL support when configured
+- **Database:** Neon PostgreSQL in production, SQLite for development
 - **Repository:** [View ShortMetric on GitHub](https://github.com/Sabari-bala/ShortMetric)
 
 ## Run Locally
