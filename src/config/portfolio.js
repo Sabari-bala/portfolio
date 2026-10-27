@@ -111,27 +111,31 @@ export const projects = [
 export const skillGroups = [
   {
     label: "Languages",
-    items: ["Python", "JavaScript", "SQL"],
+    items: ["Python", "SQL", "JavaScript"],
   },
   {
     label: "Backend",
-    items: ["Django", "Django REST Framework", "REST API design", "JWT authentication (SimpleJWT)", "Argon2 password hashing", "Role-based access control"],
-  },
-  {
-    label: "AI integration",
-    items: ["Groq API", "JSON Schema validation"],
-  },
-  {
-    label: "Frontend",
-    items: ["React", "React Router", "TanStack Query", "Tailwind CSS", "Axios", "Recharts", "HTML/CSS"],
+    items: ["Django", "Django REST Framework", "REST API design", "JWT authentication"],
   },
   {
     label: "Database",
     items: ["PostgreSQL", "SQLite", "Django ORM"],
   },
   {
-    label: "Tools & testing",
-    items: ["Git", "GitHub", "GitHub Actions (CI)", "pytest", "Vitest", "React Testing Library", "Vercel", "Render", "Neon"],
+    label: "Frontend",
+    items: ["React", "HTML5", "CSS3", "Tailwind CSS"],
+  },
+  {
+    label: "AI integration",
+    items: ["Groq API", "JSON Schema validation"],
+  },
+  {
+    label: "Testing & tools",
+    items: ["pytest", "Vitest", "React Testing Library", "Git", "GitHub", "Vite", "GitHub Actions"],
+  },
+  {
+    label: "Computer science fundamentals",
+    items: ["OOP", "Data Structures & Algorithms", "DBMS", "Computer Networks", "Operating Systems"],
   },
 ];
 
