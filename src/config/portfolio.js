@@ -1,4 +1,4 @@
-// Centralized portfolio content.
+﻿// Centralized portfolio content.
 
 export const profile = {
   name: "Sabari Bala M R",
