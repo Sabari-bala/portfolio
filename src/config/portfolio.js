@@ -47,7 +47,7 @@ export const projects = [
     ],
     decisions: [
       "Built a three-layer backend (Views, Serializers, Services) to keep business logic testable without HTTP.",
-      "Added an LLM normalizer layer that maps variable JSON key names to the expected schema before validation.",
+      "Added an LLM normalizer layer that maps variable JSON key names to the expected schema before validation, plus backend fallbacks that auto-populate urgent priorities from the database if the AI returns empty results.",
       "Fixed a rogue SECURE_SSL_REDIRECT bug failing 100+ tests via a global conftest fixture, and bypassed third-party cookie blocking by proxying /api through Vercel.",
     ],
     demoNotice: "Demo login: sabari@taskora.local / StrongPass!2026",
@@ -80,7 +80,7 @@ export const projects = [
       "URL shortening with custom aliases, expiration dates and QR code generation (PNG download).",
       "User-scoped link management with DRF token authentication.",
       "Recharts dashboard showing click activity over time and device, browser and operating-system breakdowns.",
-      "18 backend tests and GitHub Actions CI (Django checks, tests and a Vite production build).",
+      "19 automated tests (18 backend, 1 frontend) run via GitHub Actions CI on every push.",
     ],
     decisions: [
       "Built a custom User-Agent parser to capture browser, device and OS without an external parsing library.",
@@ -115,7 +115,7 @@ export const skillGroups = [
   },
   {
     label: "Backend",
-    items: ["Django", "Django REST Framework", "REST API design", "JWT authentication (SimpleJWT)", "Role-based access control"],
+    items: ["Django", "Django REST Framework", "REST API design", "JWT authentication (SimpleJWT)", "Argon2 password hashing", "Role-based access control"],
   },
   {
     label: "AI integration",
@@ -131,7 +131,7 @@ export const skillGroups = [
   },
   {
     label: "Tools & testing",
-    items: ["Git", "GitHub", "GitHub Actions (CI)", "pytest", "Factory Boy", "Vitest", "React Testing Library", "pre-commit", "Vercel", "Render", "Neon"],
+    items: ["Git", "GitHub", "GitHub Actions (CI)", "pytest", "Vitest", "React Testing Library", "Vercel", "Render", "Neon"],
   },
 ];
 
