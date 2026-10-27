@@ -39,16 +39,16 @@ export const projects = [
     eyebrow: "Multi-tenant SaaS / AI-assisted",
     summary:
       "AI-assisted project workspace where every AI suggestion needs human approval. Turn an idea into a plan, review it, then manage the work on a Kanban board.",
-highlights: [
+    highlights: [
       "Multi-tenant 5-role RBAC (Owner, Admin, Manager, Member, Viewer) enforced at the queryset level.",
       "AI co-pilot validates output against JSON Schema; backend fallbacks auto-populate priorities if AI returns empty.",
       "Optimistic Kanban board with dnd-kit and TanStack Query, featuring automatic rollback on API errors.",
       "Three-layer backend (Views, Serializers, Services) ensuring business logic is testable without HTTP.",
       "202 automated tests (backend + frontend) running in GitHub Actions CI on every push.",
-    ],,
+    ],
     decisions: [
       "Built a three-layer backend (Views, Serializers, Services) to keep business logic testable without HTTP.",
-      "Added an LLM normalizer layer that maps variable JSON key names to the expected schema before validation, plus backend fallbacks that auto-populate urgent priorities from the database if the AI returns empty results.",
+      "Added an LLM normalizer layer that maps variable JSON key names to the expected schema before validation, plus backend fallbacks.",
       "Fixed a rogue SECURE_SSL_REDIRECT bug failing 100+ tests via a global conftest fixture, and resolved third-party cookie blocking by proxying /api through Vercel.",
     ],
     demoNotice: "Demo login: sabari@taskora.local / StrongPass!2026",
@@ -77,16 +77,16 @@ highlights: [
     eyebrow: "URL shortener / Click analytics",
     summary:
       "ShortMetric is a link management and analytics platform with a data-heavy dashboard, custom aliases, QR codes and per-user data isolation.",
-highlights: [
+    highlights: [
       "URL shortening with custom aliases, expiration dates, and dynamic QR code generation (PNG download).",
       "Custom User-Agent parser extracts browser, device, and OS without external libraries.",
       "Recharts dashboard transforms raw click events into interactive time-series and traffic breakdowns.",
       "Strict per-user data isolation via ORM querysets; DRF token authentication for all protected routes.",
       "19 automated tests (backend + frontend) running in GitHub Actions CI on every push.",
-    ],,
+    ],
     decisions: [
       "Built a custom User-Agent parser to capture browser, device and OS without an external parsing library.",
-      "Fixed Vercel SPA 404 errors on browser refresh by configuring vercel.json rewrites. Acknowledged V2 trade-offs: DRF tokens do not expire, and public redirects need rate limiting.",
+      "Fixed Vercel SPA 404 errors on browser refresh by configuring vercel.json rewrites. Acknowledged V2 trade-offs.",
       "Debugged CI/CD pipeline crashes by forcing Node 22 (fixing undici worker errors) and correcting Python cache paths.",
     ],
     demoNotice: "Demo login: SabariBalaMR / ShortMetric@2026",
@@ -113,31 +113,27 @@ highlights: [
 export const skillGroups = [
   {
     label: "Languages",
-    items: ["Python", "SQL", "JavaScript"],
+    items: ["Python", "JavaScript", "SQL"],
   },
   {
     label: "Backend",
-    items: ["Django", "Django REST Framework", "REST API design", "JWT authentication"],
-  },
-  {
-    label: "Database",
-    items: ["PostgreSQL", "SQLite", "Django ORM"],
-  },
-  {
-    label: "Frontend",
-    items: ["React", "HTML5", "CSS3", "Tailwind CSS"],
+    items: ["Django", "Django REST Framework", "REST API design", "JWT authentication (SimpleJWT)", "Argon2 password hashing", "Role-based access control"],
   },
   {
     label: "AI integration",
     items: ["Groq API", "JSON Schema validation"],
   },
   {
-    label: "Testing & tools",
-    items: ["pytest", "Vitest", "React Testing Library", "Git", "GitHub", "Vite", "GitHub Actions"],
+    label: "Frontend",
+    items: ["React", "React Router", "TanStack Query", "Tailwind CSS", "Axios", "Recharts", "HTML/CSS"],
   },
   {
-    label: "Computer science fundamentals",
-    items: ["OOP", "Data Structures & Algorithms", "DBMS", "Computer Networks", "Operating Systems"],
+    label: "Database",
+    items: ["PostgreSQL", "SQLite", "Django ORM"],
+  },
+  {
+    label: "Tools & testing",
+    items: ["Git", "GitHub", "GitHub Actions (CI)", "pytest", "Vitest", "React Testing Library", "Vercel", "Render", "Neon"],
   },
 ];
 
