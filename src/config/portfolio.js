@@ -48,7 +48,7 @@ export const projects = [
     decisions: [
       "Built a three-layer backend (Views, Serializers, Services) to keep business logic testable without HTTP.",
       "Added an LLM normalizer layer that maps variable JSON key names to the expected schema before validation, plus backend fallbacks that auto-populate urgent priorities from the database if the AI returns empty results.",
-      "Fixed a rogue SECURE_SSL_REDIRECT bug failing 100+ tests via a global conftest fixture, and bypassed third-party cookie blocking by proxying /api through Vercel.",
+      "Fixed a rogue SECURE_SSL_REDIRECT bug failing 100+ tests via a global conftest fixture, and resolved third-party cookie blocking by proxying /api through Vercel.",
     ],
     demoNotice: "Demo login: sabari@taskora.local / StrongPass!2026",
     stack: [
