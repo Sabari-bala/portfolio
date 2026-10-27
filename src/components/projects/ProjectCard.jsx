@@ -4,7 +4,7 @@ import Button from "../ui/Button.jsx";
 
 export default function ProjectCard({ project }) {
   return (
-    <article className="flex flex-col rounded-xl border border-line bg-card p-6 sm:p-8 h-full">
+    <article className="flex h-full flex-col rounded-xl border border-line bg-card p-6 sm:p-8">
       {/* Top Content */}
       <div>
         <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-accent-text">
@@ -18,7 +18,7 @@ export default function ProjectCard({ project }) {
         </p>
       </div>
 
-      {/* Highlights (flex-1 ensures this expands to fill available space) */}
+      {/* Highlights (flex-1 pushes everything below it down) */}
       <ul className="mt-6 flex-1 space-y-2.5">
         {project.highlights.map((item) => (
           <li key={item} className="flex gap-2.5 text-[13px] leading-relaxed text-body">
@@ -57,7 +57,7 @@ export default function ProjectCard({ project }) {
         ))}
       </div>
 
-      {/* Buttons & Notes (mt-auto pins this to the very bottom) */}
+      {/* Bottom Area (mt-auto pins this to the absolute bottom of the card) */}
       <div className="mt-auto pt-8">
         <div className="flex flex-wrap items-center gap-2">
           {project.repository ? (

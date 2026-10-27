@@ -1,4 +1,4 @@
-﻿// Centralized portfolio content.
+// Centralized portfolio content.
 
 export const profile = {
   name: "Sabari Bala M R",
@@ -39,12 +39,13 @@ export const projects = [
     eyebrow: "Multi-tenant SaaS / AI-assisted",
     summary:
       "AI-assisted project workspace where every AI suggestion needs human approval. Turn an idea into a plan, review it, then manage the work on a Kanban board.",
-    highlights: [
-      "Workspace-scoped querysets and object-level permissions across five roles, tested with a role × action matrix.",
-      "AI-generated plans are normalized and validated against JSON Schema, then reviewed by the user before anything is saved.",
-      "Kanban board with drag-and-drop, optimistic updates and automatic rollback when a request fails.",
-      "202 automated tests (backend + frontend) run via GitHub Actions CI on every push.",
-    ],
+highlights: [
+      "Multi-tenant 5-role RBAC (Owner, Admin, Manager, Member, Viewer) enforced at the queryset level.",
+      "AI co-pilot validates output against JSON Schema; backend fallbacks auto-populate priorities if AI returns empty.",
+      "Optimistic Kanban board with dnd-kit and TanStack Query, featuring automatic rollback on API errors.",
+      "Three-layer backend (Views, Serializers, Services) ensuring business logic is testable without HTTP.",
+      "202 automated tests (backend + frontend) running in GitHub Actions CI on every push.",
+    ],,
     decisions: [
       "Built a three-layer backend (Views, Serializers, Services) to keep business logic testable without HTTP.",
       "Added an LLM normalizer layer that maps variable JSON key names to the expected schema before validation, plus backend fallbacks that auto-populate urgent priorities from the database if the AI returns empty results.",
@@ -76,12 +77,13 @@ export const projects = [
     eyebrow: "URL shortener / Click analytics",
     summary:
       "ShortMetric is a link management and analytics platform with a data-heavy dashboard, custom aliases, QR codes and per-user data isolation.",
-    highlights: [
-      "URL shortening with custom aliases, expiration dates and QR code generation (PNG download).",
-      "User-scoped link management with DRF token authentication.",
-      "Recharts dashboard showing click activity over time and device, browser and operating-system breakdowns.",
-      "19 automated tests (18 backend, 1 frontend) run via GitHub Actions CI on every push.",
-    ],
+highlights: [
+      "URL shortening with custom aliases, expiration dates, and dynamic QR code generation (PNG download).",
+      "Custom User-Agent parser extracts browser, device, and OS without external libraries.",
+      "Recharts dashboard transforms raw click events into interactive time-series and traffic breakdowns.",
+      "Strict per-user data isolation via ORM querysets; DRF token authentication for all protected routes.",
+      "19 automated tests (backend + frontend) running in GitHub Actions CI on every push.",
+    ],,
     decisions: [
       "Built a custom User-Agent parser to capture browser, device and OS without an external parsing library.",
       "Fixed Vercel SPA 404 errors on browser refresh by configuring vercel.json rewrites. Acknowledged V2 trade-offs: DRF tokens do not expire, and public redirects need rate limiting.",
