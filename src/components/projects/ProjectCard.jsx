@@ -5,8 +5,9 @@ import Button from "../ui/Button.jsx";
 export default function ProjectCard({ project }) {
   return (
     <article className="flex h-full flex-col rounded-xl border border-line bg-card p-6 sm:p-8">
-      {/* Top Content */}
-      <div>
+      
+      {/* Main Content (flex-1 pushes the bottom buttons down) */}
+      <div className="flex-1">
         <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-accent-text">
           {project.eyebrow}
         </p>
@@ -16,49 +17,47 @@ export default function ProjectCard({ project }) {
         <p className="mt-3 text-[14px] leading-relaxed text-muted">
           {project.summary}
         </p>
-      </div>
 
-      {/* Highlights (flex-1 pushes everything below it down) */}
-      <ul className="mt-6 flex-1 space-y-2.5">
-        {project.highlights.map((item) => (
-          <li key={item} className="flex gap-2.5 text-[13px] leading-relaxed text-body">
-            <span
-              className="mt-[8px] h-1 w-1 shrink-0 rounded-full bg-accent"
-              aria-hidden="true"
-            />
-            <span>{item}</span>
-          </li>
-        ))}
-      </ul>
-
-      {/* Design Decisions */}
-      <div className="mt-6 rounded-lg border border-line bg-sunken p-4">
-        <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-accent-text">
-          Design decisions
-        </p>
-        <ul className="mt-2 space-y-1.5">
-          {project.decisions.map((item) => (
-            <li key={item} className="text-[12px] leading-relaxed text-muted">
-              {item}
+        {/* Bullets (Removed flex-1 so it doesn't stretch awkwardly) */}
+        <ul className="mt-6 space-y-2.5">
+          {project.highlights.map((item) => (
+            <li key={item} className="flex gap-2.5 text-[13px] leading-relaxed text-body">
+              <span
+                className="mt-[8px] h-1 w-1 shrink-0 rounded-full bg-accent"
+                aria-hidden="true"
+              />
+              <span>{item}</span>
             </li>
           ))}
         </ul>
+
+        <div className="mt-6 rounded-lg border border-line bg-sunken p-4">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-accent-text">
+            Design decisions
+          </p>
+          <ul className="mt-2 space-y-1.5">
+            {project.decisions.map((item) => (
+              <li key={item} className="text-[12px] leading-relaxed text-muted">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="mt-6 flex flex-wrap gap-1.5" aria-label="Technology stack">
+          {project.stack.map((tech) => (
+            <span
+              key={tech}
+              className="rounded border border-line bg-card px-2 py-0.5 text-[11px] font-medium text-body"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
       </div>
 
-      {/* Tech Stack */}
-      <div className="mt-6 flex flex-wrap gap-1.5" aria-label="Technology stack">
-        {project.stack.map((tech) => (
-          <span
-            key={tech}
-            className="rounded border border-line bg-card px-2 py-0.5 text-[11px] font-medium text-body"
-          >
-            {tech}
-          </span>
-        ))}
-      </div>
-
-      {/* Bottom Area (mt-auto pins this to the absolute bottom of the card) */}
-      <div className="mt-auto pt-8">
+      {/* Bottom Area (mt-auto locks it to the bottom) */}
+      <div className="mt-8 pt-6 border-t border-line">
         <div className="flex flex-wrap items-center gap-2">
           {project.repository ? (
             <Button
