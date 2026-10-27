@@ -43,12 +43,12 @@ export const projects = [
       "Workspace-scoped querysets and object-level permissions across five roles, tested with a role × action matrix.",
       "AI-generated plans are normalized and validated against JSON Schema, then reviewed by the user before anything is saved.",
       "Kanban board with drag-and-drop, optimistic updates and automatic rollback when a request fails.",
-      "200+ backend tests (94% coverage) and frontend tests (Vitest + RTL) run in GitHub Actions CI.",
+      "202 automated tests (backend + frontend) run via GitHub Actions CI on every push.",
     ],
     decisions: [
       "Built a three-layer backend (Views, Serializers, Services) to keep business logic testable without HTTP.",
-      "Added an LLM normalizer layer that maps variable JSON key names to the expected schema (for example “name” to “title”) before validation.",
-      "Kept access tokens in memory with HttpOnly refresh cookies; fixed third-party cookie blocking by proxying /api through Vercel, and fixed a rogue SECURE_SSL_REDIRECT bug failing 100+ tests.",
+      "Added an LLM normalizer layer that maps variable JSON key names to the expected schema before validation.",
+      "Fixed a rogue SECURE_SSL_REDIRECT bug failing 100+ tests via a global conftest fixture, and bypassed third-party cookie blocking by proxying /api through Vercel.",
     ],
     demoNotice: "Demo login: sabari@taskora.local / StrongPass!2026",
     stack: [
@@ -80,12 +80,12 @@ export const projects = [
       "URL shortening with custom aliases, expiration dates and QR code generation (PNG download).",
       "User-scoped link management with DRF token authentication.",
       "Recharts dashboard showing click activity over time and device, browser and operating-system breakdowns.",
-      "18 automated backend tests and GitHub Actions CI (Django checks, tests and a Vite production build).",
+      "18 backend tests and GitHub Actions CI (Django checks, tests and a Vite production build).",
     ],
     decisions: [
       "Built a custom User-Agent parser to capture browser, device and OS without an external parsing library.",
-      "Fixed a Vercel build failure caused by invisible UTF-8 byte-order marks added by PowerShell.",
       "Fixed Vercel SPA 404 errors on browser refresh by configuring vercel.json rewrites. Acknowledged V2 trade-offs: DRF tokens do not expire, and public redirects need rate limiting.",
+      "Debugged CI/CD pipeline crashes by forcing Node 22 (fixing undici worker errors) and correcting Python cache paths.",
     ],
     demoNotice: "Demo login: SabariBalaMR / ShortMetric@2026",
     stack: [
@@ -131,7 +131,7 @@ export const skillGroups = [
   },
   {
     label: "Tools & testing",
-    items: ["Git", "GitHub", "GitHub Actions (CI)", "pytest", "Factory Boy", "pre-commit", "Vercel", "Render", "Neon"],
+    items: ["Git", "GitHub", "GitHub Actions (CI)", "pytest", "Factory Boy", "Vitest", "React Testing Library", "pre-commit", "Vercel", "Render", "Neon"],
   },
 ];
 
