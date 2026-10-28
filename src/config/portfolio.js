@@ -44,7 +44,7 @@ export const projects = [
       "AI project planner, task breakdown, summarization and project insights: output is normalized, validated against JSON Schema and reviewed by the user before anything is saved.",
       "Kanban board with drag-and-drop, optimistic updates and automatic rollback when a request fails.",
       "JWT authentication with in-memory access tokens and HttpOnly refresh cookies, with refresh-token rotation and logout blacklisting.",
-      "201 backend tests (94% coverage) and a Vitest component test, run in GitHub Actions CI on every push.",
+      "201 backend tests (94% coverage) and a Vitest component test; CI runs on pushes to main or feature branches and pull requests targeting main.",
     ],
     decisions: [
       "Structured the backend as Views, Serializers and Services so business logic is testable without HTTP.",
@@ -90,7 +90,7 @@ export const projects = [
       "Per-user data isolation through owner-filtered querysets; DRF token authentication on all protected routes.",
       "Public redirect endpoint validates link status and expiry, then records timestamp, referrer and user-agent data using a custom User-Agent parser with no external library.",
       "Recharts dashboard with click activity over time and browser, device and OS breakdowns, plus search, filtering, sorting and server-side pagination.",
-      "18 backend tests and a Vitest component test, run in GitHub Actions CI on every push.",
+      "18 backend tests and a Vitest component test; CI runs on pushes to main and pull requests targeting main.",
     ],
     decisions: [
       "Fixed Vercel 404 errors on browser refresh with vercel.json rewrites.",
