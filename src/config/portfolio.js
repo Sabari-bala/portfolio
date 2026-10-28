@@ -16,7 +16,7 @@ export const profile = {
       "I build secure, well-tested full-stack apps with Django REST Framework, React, and PostgreSQL. My latest project, Taskora AI, is a multi-tenant workspace with five-role access control, where AI suggestions need human approval before anything is saved.",
     availability: "Available immediately \u00B7 Chennai, Bengaluru or Remote",
     proofs: [
-      { value: "200+", label: "tests \u00B7 94% coverage" },
+      { value: "201", label: "backend tests \u00B7 94% coverage" },
       { value: "2", label: "live full-stack apps" },
       { value: "5", label: "ACCESS ROLES (RBAC)" },
     ],
@@ -40,16 +40,20 @@ export const projects = [
     summary:
       "AI-assisted project workspace where every AI suggestion needs human approval. Turn an idea into a plan, review it, then manage the work on a Kanban board.",
     highlights: [
-      "Multi-tenant 5-role RBAC (Owner, Admin, Manager, Member, Viewer) enforced at the queryset level.",
-      "AI co-pilot validates output against JSON Schema; backend fallbacks auto-populate priorities if AI returns empty.",
-      "Optimistic Kanban board with dnd-kit and TanStack Query, featuring automatic rollback on API errors.",
-      "Three-layer backend (Views, Serializers, Services) ensuring business logic is testable without HTTP.",
-      "202 automated tests (backend + frontend) running in GitHub Actions CI on every push.",
+      "Five roles (Owner, Admin, Manager, Member, Viewer) enforced with workspace-scoped querysets and object-level permission classes, tested with a role × action matrix.",
+      "AI project planner, task breakdown, summarization and project insights: output is normalized, validated against JSON Schema and reviewed by the user before anything is saved.",
+      "Kanban board with drag-and-drop, optimistic updates and automatic rollback when a request fails.",
+      "JWT authentication with in-memory access tokens and HttpOnly refresh cookies, with refresh-token rotation and logout blacklisting.",
+      "201 backend tests (94% coverage) and a Vitest component test, run in GitHub Actions CI on every push.",
     ],
     decisions: [
-      "Built a three-layer backend (Views, Serializers, Services) to keep business logic testable without HTTP.",
-      "Added an LLM normalizer layer that maps variable JSON key names to the expected schema before validation, plus backend fallbacks.",
-      "Fixed a rogue SECURE_SSL_REDIRECT bug failing 100+ tests via a global conftest fixture, and resolved third-party cookie blocking by proxying /api through Vercel.",
+      "Structured the backend as Views, Serializers and Services so business logic is testable without HTTP.",
+      "Added an LLM normalizer that maps variable JSON key names (for example “name” to “title”) before schema validation, plus backend fallbacks when the AI returns empty priorities.",
+      "Avoided third-party cookie blocking by proxying /api through Vercel so the HttpOnly refresh cookie is first-party, and added a catch-all rewrite so deep links survive a refresh.",
+      "Fixed a test-suite failure (100+ tests failing from a SECURE_SSL_REDIRECT setting) with a global pytest fixture.",
+      "Made the app usable on mobile: dynamic viewport height for the sidebar, and a touch-sensor delay so Kanban cards can be dragged without scrolling the page.",
+      "Gated backend deploys: after backend and frontend checks pass on main, a GitHub Actions job triggers the Render deploy hook.",
+      "Verified Argon2 password hashing in production and locked the demo accounts against password changes.",
     ],
     demoNotice: "Demo login: sabari@taskora.local / StrongPass!2026",
     stack: [
@@ -65,7 +69,11 @@ export const projects = [
       "SimpleJWT",
       "Groq API",
       "pytest",
-      "GitHub Actions"
+      "Vitest",
+      "GitHub Actions",
+      "Vercel",
+      "Render",
+      "Neon"
     ],
     repository: "https://github.com/Sabari-bala/taskora-ai",
     live: "https://taskora-ai-delta.vercel.app",
@@ -78,16 +86,20 @@ export const projects = [
     summary:
       "ShortMetric is a link management and analytics platform with a data-heavy dashboard, custom aliases, QR codes and per-user data isolation.",
     highlights: [
-      "URL shortening with custom aliases, expiration dates, and dynamic QR code generation (PNG download).",
-      "Custom User-Agent parser extracts browser, device, and OS without external libraries.",
-      "Recharts dashboard transforms raw click events into interactive time-series and traffic breakdowns.",
-      "Strict per-user data isolation via ORM querysets; DRF token authentication for all protected routes.",
-      "19 automated tests (backend + frontend) running in GitHub Actions CI on every push.",
+      "Short links with generated codes or custom aliases (reserved-word and duplicate protection), expiration dates, enable/disable and edit, plus QR codes with PNG download.",
+      "Per-user data isolation through owner-filtered querysets; DRF token authentication on all protected routes.",
+      "Public redirect endpoint validates link status and expiry, then records timestamp, referrer and user-agent data using a custom User-Agent parser with no external library.",
+      "Recharts dashboard with click activity over time and browser, device and OS breakdowns, plus search, filtering, sorting and server-side pagination.",
+      "18 backend tests and a Vitest component test, run in GitHub Actions CI on every push.",
     ],
     decisions: [
-      "Built a custom User-Agent parser to capture browser, device and OS without an external parsing library.",
-      "Fixed Vercel SPA 404 errors on browser refresh by configuring vercel.json rewrites. Acknowledged V2 trade-offs.",
-      "Debugged CI/CD pipeline crashes by forcing Node 22 (fixing undici worker errors) and correcting Python cache paths.",
+      "Fixed Vercel 404 errors on browser refresh with vercel.json rewrites.",
+      "Diagnosed a build failure caused by invisible UTF-8 byte-order marks added by Windows PowerShell, and removed them.",
+      "Fixed CI failures by pinning Node 22 and correcting the Python cache path.",
+      "Split routes with React.lazy so heavy dependencies like Recharts stay out of the initial bundle.",
+      "Moved the production database to Neon PostgreSQL and configured CORS between the Vercel frontend and the Render API.",
+      "Fixed an alias-edit bug where a link’s own alias failed the uniqueness check, by excluding the current record in the serializer.",
+      "Documented known limitations: tokens do not expire, the public redirect has no rate limiting, and bot or link-preview traffic can inflate click counts.",
     ],
     demoNotice: "Demo login: SabariBalaMR / ShortMetric@2026",
     stack: [
@@ -102,7 +114,11 @@ export const projects = [
       "Recharts",
       "Axios",
       "qrcode.react",
-      "GitHub Actions"
+      "Vitest",
+      "GitHub Actions",
+      "Vercel",
+      "Render",
+      "Neon"
     ],
     repository: "https://github.com/Sabari-bala/ShortMetric",
     live: "https://shortmetric.vercel.app",
@@ -117,23 +133,31 @@ export const skillGroups = [
   },
   {
     label: "Backend",
-    items: ["Django", "Django REST Framework", "REST API design", "JWT authentication (SimpleJWT)", "Argon2 password hashing", "Role-based access control"],
+    items: ["Django", "Django REST Framework", "REST API Development", "JWT Authentication (SimpleJWT)", "Token Authentication", "Argon2 password hashing", "Role-based access control"],
   },
   {
-    label: "AI integration",
-    items: ["Groq API", "JSON Schema validation"],
+    label: "AI Integration",
+    items: ["Groq API", "JSON Schema Validation"],
   },
   {
     label: "Frontend",
-    items: ["React", "React Router", "TanStack Query", "Tailwind CSS", "Axios", "Recharts", "HTML/CSS"],
+    items: ["React", "React Router", "TanStack Query", "Tailwind CSS", "Axios", "Recharts", "HTML5", "CSS3"],
   },
   {
-    label: "Database",
+    label: "Databases",
     items: ["PostgreSQL", "SQLite", "Django ORM"],
   },
   {
-    label: "Tools & testing",
-    items: ["Git", "GitHub", "GitHub Actions (CI)", "pytest", "Vitest", "React Testing Library", "Vercel", "Render", "Neon"],
+    label: "Testing & CI",
+    items: ["pytest", "Factory Boy", "Vitest", "React Testing Library", "GitHub Actions"],
+  },
+  {
+    label: "Tools & Deployment",
+    items: ["Git", "GitHub", "Vite", "pre-commit", "Vercel", "Render", "Neon"],
+  },
+  {
+    label: "CS Fundamentals",
+    items: ["Object-Oriented Programming (OOP)", "Data Structures and Algorithms (DSA)", "Database Management Systems (DBMS)", "Computer Networks", "Operating Systems"],
   },
 ];
 
@@ -173,8 +197,8 @@ export const about = {
   ],
   facts: [
     { label: "Location", value: "Chennai, India" },
-    { label: "Training", value: "Python Full Stack Development, QSpiders" },
-    { label: "Education", value: "B.Sc. Biotechnology, RVS College of Arts and Science (2025)" },
+    { label: "Training", value: "Python Full Stack Development, QSpiders; Technology Job Simulation, Deloitte (Forage)" },
+    { label: "Education", value: "B.Sc. Biotechnology, RVS College of Arts and Science, Coimbatore (April 2025)" },
     { label: "Focus", value: "Django REST Framework, React, PostgreSQL" },
   ],
 };
