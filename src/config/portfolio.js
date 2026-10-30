@@ -12,8 +12,7 @@ export const profile = {
   },
   hero: {
     eyebrow: "Python Full Stack Developer",
-    intro:
-      "I build secure, well-tested full-stack apps with Django REST Framework, React, and PostgreSQL. My latest project, Taskora AI, is a multi-tenant workspace with five-role access control, where AI suggestions need human approval before anything is saved.",
+    intro: "Python Full Stack Developer specializing in secure, data-driven web applications using Django REST Framework, React, PostgreSQL, and Tailwind CSS. My engineering focus spans scalable backend architecture, strict data isolation, and responsive, accessible UI development. Recent work includes Taskora AI (a multi-tenant SaaS with human-approved AI) and ShortMetric (a data-heavy link analytics platform), both fully deployed with automated CI pipelines.",
     availability: "Available immediately \u00B7 Chennai, Bengaluru or Remote",
     proofs: [
       { value: "201", label: "backend tests \u00B7 94% coverage" },
