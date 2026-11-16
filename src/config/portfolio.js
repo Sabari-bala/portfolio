@@ -12,7 +12,7 @@ export const profile = {
   },
   hero: {
     eyebrow: "Python Full Stack Developer",
-    intro: "Python Full Stack Developer specializing in secure, data-driven web applications using Django REST Framework, React, PostgreSQL, and Tailwind CSS. My engineering focus spans scalable backend architecture, strict data isolation, and responsive, accessible UI development. Recent work includes Taskora AI (a multi-tenant SaaS with human-approved AI) and ShortMetric (a data-heavy link analytics platform), both fully deployed with automated CI pipelines.",
+    intro: "Software Developer focused on Python backend engineering and full-stack application development. Skilled in designing REST APIs, implementing role-based access control and developing database-driven web applications using Django REST Framework, PostgreSQL and React, with two deployed applications demonstrating practical development experience.",
     availability: "Available immediately \u00B7 Chennai, Bengaluru or Remote",
     proofs: [
       { value: "201", label: "backend tests \u00B7 94% coverage" },
@@ -133,7 +133,7 @@ export const skillGroups = [
   },
   {
     label: "Backend",
-    items: ["Django", "Django REST Framework", "REST API Development", "JWT Authentication (SimpleJWT)", "Token Authentication", "Argon2 password hashing", "Role-based access control"],
+    items: ["Django", "Django REST Framework", "REST API Development", "JWT Authentication (SimpleJWT)", "Token Authentication", "Argon2 password hashing", "Role-based access control", "Authentication & Authorization"],
   },
   {
     label: "AI Integration",
@@ -145,11 +145,11 @@ export const skillGroups = [
   },
   {
     label: "Databases",
-    items: ["PostgreSQL", "SQLite", "Django ORM"],
+    items: ["PostgreSQL", "SQLite", "Django ORM", "Relational Database Design", "Database Indexing"],
   },
   {
     label: "Testing & CI",
-    items: ["pytest", "Factory Boy", "Vitest", "React Testing Library", "GitHub Actions"],
+    items: ["pytest", "Factory Boy", "Vitest", "React Testing Library", "GitHub Actions", "Unit Testing", "Integration Testing", "API Testing", "Debugging"],
   },
   {
     label: "Tools & Deployment",
@@ -158,6 +158,10 @@ export const skillGroups = [
   {
     label: "CS Fundamentals",
     items: ["Object-Oriented Programming (OOP)", "Data Structures and Algorithms (DSA)", "Database Management Systems (DBMS)", "Computer Networks", "Operating Systems"],
+  },
+  {
+    label: "Familiar With (basics)",
+    items: ["Docker", "Linux", "Redis", "AWS Fundamentals", "Microservices", "System Design", "SOLID Principles", "Query Optimization"],
   },
 ];
 
