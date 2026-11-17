@@ -16,7 +16,7 @@ export const profile = {
     availability: "Available immediately \u00B7 Chennai, Bengaluru or Remote",
     proofs: [
       { value: "201", label: "backend tests \u00B7 94% coverage" },
-      { value: "2", label: "live full-stack apps" },
+      { value: "2", label: "deployed full-stack apps" },
       { value: "5", label: "ACCESS ROLES (RBAC)" },
     ],
     workingWith: ["Python", "Django", "Django REST Framework", "React", "PostgreSQL", "JWT authentication", "Groq API"],

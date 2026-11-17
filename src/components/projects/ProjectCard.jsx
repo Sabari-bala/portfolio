@@ -99,7 +99,7 @@ export default function ProjectCard({ project }) {
           <div className="mt-3 space-y-1">
             <p className="flex items-center gap-1.5 text-[11px] text-muted">
               <Info size={12} aria-hidden="true" />
-              Backend runs on a free tier. First load may take up to 60 seconds.
+              Hosted on free tiers (Render and Neon). It can take about a minute to wake up, and it may be suspended if the monthly free-tier limit is reached. The repository has the code, tests and setup steps.
             </p>
             {project.demoNotice && (
               <p className="text-[11px] text-muted">
