@@ -12,7 +12,7 @@ export const profile = {
   },
   hero: {
     eyebrow: "Python Full Stack Developer",
-    intro: "Software Developer focused on Python backend engineering and full-stack application development. Skilled in designing REST APIs, implementing role-based access control and developing database-driven web applications using Django REST Framework, PostgreSQL and React, with two deployed applications demonstrating practical development experience.",
+    intro: "Python Full Stack Developer with hands-on experience developing and deploying web applications using Python, Django, Django REST Framework, PostgreSQL and React. Skilled in REST API development, authentication, role-based access control, database management and frontend-backend integration, with two deployed full-stack projects.",
     availability: "Available immediately \u00B7 Chennai, Bengaluru or Remote",
     proofs: [
       { value: "201", label: "backend tests \u00B7 94% coverage" },
@@ -43,7 +43,7 @@ export const projects = [
       "AI project planner, task breakdown, summarization and project insights: output is normalized, validated against JSON Schema and reviewed by the user before anything is saved.",
       "Kanban board with drag-and-drop, optimistic updates and automatic rollback when a request fails.",
       "JWT authentication with in-memory access tokens and HttpOnly refresh cookies, with refresh-token rotation and logout blacklisting.",
-      "201 backend tests (94% coverage) and a Vitest component test; CI runs on pushes to main or feature branches and pull requests targeting main.",
+      "201 backend tests (94% coverage) and a Vitest component test; GitHub Actions CI runs on pushes and pull requests, and a deploy hook triggers the Render backend deploy only after all checks pass on main.",
     ],
     decisions: [
       "Structured the backend as Views, Serializers and Services so business logic is testable without HTTP.",
@@ -87,7 +87,7 @@ export const projects = [
       "ShortMetric is a link management and analytics platform with a data-heavy dashboard, custom aliases, QR codes and per-user data isolation.",
     highlights: [
       "Short links with generated codes or custom aliases (reserved-word and duplicate protection), expiration dates, enable/disable and edit, plus QR codes with PNG download.",
-      "Per-user data isolation through owner-filtered querysets; DRF token authentication on all protected routes.",
+      "Per-user data isolation through owner-filtered querysets; DRF token authentication on all protected routes, with Argon2 password hashing.",
       "Public redirect endpoint validates link status and expiry, then records timestamp, referrer and user-agent data using a custom User-Agent parser with no external library.",
       "Recharts dashboard with click activity over time and browser, device and OS breakdowns, plus search, filtering, sorting and server-side pagination.",
       "18 backend tests and a Vitest component test; CI runs on pushes to main and pull requests targeting main.",
@@ -113,6 +113,7 @@ export const projects = [
       "Tailwind CSS",
       "Recharts",
       "Axios",
+      "Argon2",
       "qrcode.react",
       "Vitest",
       "GitHub Actions",
@@ -157,11 +158,7 @@ export const skillGroups = [
   },
   {
     label: "CS Fundamentals",
-    items: ["Object-Oriented Programming (OOP)", "Data Structures and Algorithms (DSA)", "Database Management Systems (DBMS)", "Computer Networks", "Operating Systems"],
-  },
-  {
-    label: "Familiar With (basics)",
-    items: ["Docker", "Linux", "Redis", "AWS Fundamentals", "Microservices", "System Design", "SOLID Principles", "Query Optimization"],
+    items: ["Object-Oriented Programming (OOP)", "Data Structures and Algorithms (DSA)", "Database Management Systems (DBMS)"],
   },
 ];
 
@@ -202,7 +199,7 @@ export const about = {
   facts: [
     { label: "Location", value: "Chennai, India" },
     { label: "Training", value: "Python Full Stack Development, QSpiders; Technology Job Simulation, Deloitte (Forage)" },
-    { label: "Education", value: "B.Sc. Biotechnology, RVS College of Arts and Science, Coimbatore (April 2025)" },
+    { label: "Education", value: "B.Sc. Biotechnology, RVS College of Arts and Science, Coimbatore (2022 – 2025)" },
     { label: "Focus", value: "Django REST Framework, React, PostgreSQL" },
   ],
 };
